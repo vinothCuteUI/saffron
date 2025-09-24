@@ -144,8 +144,14 @@ body{
     font-family: "Roboto", sans-serif;
     font-size: 1rem;
 }
+
+h1, h2, h3, h4, h5, h6{
+     font-family: 'Outfit', sans-serif;
+}
+
 p{
     color: var(--text-body-clr);
+    font-size: 1.1rem;
 }
 /* Button --------------------------------- */
 .btn{
@@ -194,6 +200,46 @@ p{
 }
 .btn-outline-primary:after{
     background-color: var(--secondary-clr) !important;
+}
+
+.btn-2{
+    background-color: var(--primary-clr);
+    color: #fff;
+    border-radius: 25px;
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+    border:solid 1px var(--primary-clr);
+    height: 50px;
+    line-height: 1;
+    min-width: 150px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-2 .btn-icon{
+    font-size: 1rem;
+    flex: 0 0 auto;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    align-content: center;
+    background-color: #fff;
+    color: var(--primary-clr);
+    transform: rotate(-40deg);
+    transition: all 0.3s ease;
+}
+.btn-2:hover{
+    background-color: transparent;
+    color: var(--primary-clr);
+}
+.btn-2:hover .btn-icon{
+    background-color: var(--primary-clr);
+    color: #fff;
 }
 /* Top header style ------------------- */
 .main-header{
@@ -391,7 +437,6 @@ p{
     margin-bottom: 1rem;
 }
 .banner-content h2{
-    font-family: 'Outfit', sans-serif;
     color: #fff;
     font-size: 5rem;
     font-weight: 800;
@@ -421,11 +466,29 @@ p{
     margin-bottom: 1rem;
 }
 .page-header h2{
-    font-family: 'Outfit', sans-serif;
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
     letter-spacing: 1px;
+}
+.page-header-2{
+    padding-bottom: 1.5rem;
+}
+.page-header-2 h3{
+   font-family: 'Outfit', sans-serif;
+    color: var(--primary-clr);
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+.page-header-2 h2{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+.page-hr-white h2{
+    color: #fff;
 }
 /* About section ------- */
 .about-section{
@@ -438,18 +501,7 @@ p{
     font-weight: 400;
     margin-bottom: 1rem;
 }
-.about-content h2{
-    font-family: 'Outfit', sans-serif;
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    letter-spacing: 1px;
-}
-.about-content p{
-    font-size: 1rem;
-    color: var(--text-body-clr);
-    margin-bottom: 1.5rem;
-}
+
 .list{
     list-style: none;
     padding: 0;
@@ -507,9 +559,7 @@ p{
     align-items: center;
     gap: 1rem;
 }
-
 .abt-lt-text h2{
-    font-family: 'Outfit', sans-serif;
     font-weight: 600;
     font-size: 4.2rem;
     color: var(--primary-clr);
@@ -519,6 +569,78 @@ p{
     font-weight: 400;
 }
 
+.abt-img-1{
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+.abt-img-2{
+    border-radius: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) , rgba(0, 0, 0, 0.5)), url(../images/about-img-2.webp);
+    padding: 2rem;
+    text-align: center;
+}
+.abt-img-2 span{
+    font-family: 'Outfit', sans-serif;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+}
+.abt-img-2 p{
+    color: #fff;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.abt-img-3{
+    background-image: url(../images/about-img-3.webp);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.abt-rt-content h4{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.abt-card{
+    background-color: #242424;
+    padding: 1.2rem;
+    border-radius: 15px;
+    color: #fff;
+    text-align: center;
+
+}
+.abt-card h4{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+.abt-card img{
+    width: 70px;
+    height: auto;
+}
+.abt-card .abt-card-text{
+    padding-top: 1rem;
+    margin-top: 1.4rem;
+    border-top: solid 1px #fff;
+}
+.abt-card-text span{
+    font-family: 'Outfit', sans-serif;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.abt-card-text p{
+    color: #fff;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
 /* Offer section ---------------- */
 .section-hdr-white{
     background-color: var(--top-header-bg);
@@ -534,7 +656,6 @@ p{
     margin-bottom: 1rem;
 }
 .section-hdr-white h2{
-    font-family: 'Outfit', sans-serif;
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1rem;
@@ -648,11 +769,42 @@ p{
 }
 .card-2-content h3{
     font-family: 'Outfit', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
 }
 
+.card-3{
+    background-color: #f5f5f5;
+    padding: 2rem;
+    border-radius: 10px;
+    border: solid 1px #ccc;
+}
+.card-3-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+.card-3-header .card-3-img{
+    width: 80px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px #ccc;
+    border-radius: 10px;
+}
+.card-3-img img{
+    width: 35px;
+    height: auto;
+}
+.card-3-header h3{
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
 /* Slider 1 ------------------ */
 .recent-project-slide .splide__slide {
     border-radius: 0;
@@ -738,7 +890,6 @@ p{
    transition: all 0.5s ease;
 }
 .recent-project-slide .splide__slide .content-slide h4{
-    font-family: 'Outfit', sans-serif;
     color: #fff;
     font-size: 1.5rem;
     font-weight: 500;
@@ -759,4 +910,156 @@ p{
 .recent-project-slide .splide__slide:hover:after{
     opacity: 1;
     visibility: visible;
+}
+
+/* Company services -----------------*/
+.service-content{
+    z-index: 1;
+}
+.service-content .page-overlap-img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 40%;
+    border-radius: 15px;
+    z-index: -1;
+    background-image: url(../images/company-service-img.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.service-content .overlap-inner{
+    position: absolute;
+    top: -40px;
+    right: -100px;
+    width: 750px;
+    height: 750px;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    z-index: -2;
+}
+
+/* Choose Us ------------------ */
+.list-card-item{
+    position: relative;
+    padding: 0 0 4.5rem 80px;
+}
+.list-card-item h3{
+    font-size: 1.5rem;
+}
+.choose-img{
+    position: absolute;
+    left: 0;
+    width: 45px;
+    height: auto;
+
+}
+.choose-rt-img-1{
+    height: 100%;
+    background-image: url(../images/recent-project-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius:120px 0 120px 0;
+}
+.choose-rt-img-2{
+    height: 47%;
+    background-image: url(../images/choose-us-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius:120px 0 0 0;
+    margin-bottom: 2rem;
+}
+.choose-rt-img-3{
+    height: 47%;
+    background-image: url(../images/choose-us-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0 120px 0 0;
+}
+
+/* testimonial --------------- */
+.testimonial{
+    position: relative;
+    background-image: url(../images/img-bg-1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 1;
+}
+.testimonial:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background-color: rgb(0 0 0 / 82%);
+    z-index: -1;
+}
+.testimonial-slide{
+    padding: 3rem;
+    position: relative;
+    z-index: 1;
+}
+.testimonial-slide::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 55%;
+    background-color: var(--primary-clr);
+    z-index: -1;
+}
+.testimonial-content p{
+    color: #fff;
+    margin-bottom: 2rem;
+}
+.testimonial-user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.testimonial-picture{
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.testimonial-picture img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.testimonial-user .user-name{
+    color: #fff;
+}
+.testimonial-user .user-name h4{
+    margin-bottom: 0.3rem;
+}
+.testimonial-quites img{
+    opacity: 0.3;
+}
+.testimonial-slides .splide__pagination{
+    right: auto;
+    left: -100px;
+    display: flex;
+    flex-direction: column;
+    bottom: 5rem;
+}
+.testimonial-slides .splide__pagination__page{
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border: solid 2px #a57348;
+}
+.testimonial-slides .splide__pagination__page.is-active{
+    transform: scale(1);
+    background-color: transparent;
+    border-color: #fff;
 }
