@@ -144,7 +144,9 @@ body{
     font-family: "Roboto", sans-serif;
     font-size: 1rem;
 }
-
+p{
+    color: var(--text-body-clr);
+}
 /* Button --------------------------------- */
 .btn{
     position: relative;
@@ -403,11 +405,34 @@ body{
     margin-top: 2rem;
 }
 
+/* Page section style ---------------- */
+.page-section{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.page-header{
+    padding-bottom: 1.5rem;
+}
+.page-header h4{
+    font-family: 'Outfit', sans-serif;
+    color: var(--primary-clr);
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+.page-header h2{
+    font-family: 'Outfit', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
 /* About section ------- */
 .about-section{
     padding: 100px 0;
 }
 .about-content h4{
+    font-family: 'Outfit', sans-serif;
     color: var(--primary-clr);
     font-size: 1.4rem;
     font-weight: 400;
@@ -415,7 +440,7 @@ body{
 }
 .about-content h2{
     font-family: 'Outfit', sans-serif;
-    font-size: 3.2rem;
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
     letter-spacing: 1px;
@@ -510,7 +535,7 @@ body{
 }
 .section-hdr-white h2{
     font-family: 'Outfit', sans-serif;
-    font-size: 2.8rem;
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1rem;
     letter-spacing: 1px;
@@ -560,4 +585,178 @@ body{
 }
 .card-1:hover .card-1-linkbtn svg path{
     stroke: #fff;
+}
+
+.card-2{
+    position: relative;
+}
+.card-2:after{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 73%;
+    width: 64%;
+    height: 140px;
+    background-image: url('../images/shape.svg');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.work-process:last-child .card-2:after{
+    display: none;
+}
+.card-2-img{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border:dashed 1px #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 auto 2rem;
+    filter: drop-shadow(0px 0px 60px rgba(21, 24, 27, 0.1));
+    transition: all 0.3s ease;
+}
+.card-2-img img{
+    width: 60px;
+    height: auto;
+}
+.number-circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgb(255 224 197);
+    border:dashed 1px #999;
+    text-align: center;
+    line-height: 35px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #777;
+    transition: all 0.3s ease;
+}
+.card-2-img:hover{
+    background-color: #fff;
+}
+.card-2-img:hover .number-circle{
+    background-color: var(--text-primary-clr);
+    color: #fff;
+}
+.card-2-content h3{
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Slider 1 ------------------ */
+.recent-project-slide .splide__slide {
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow:none;
+    transition: transform 0.5s ease;
+}
+.recent-project-slide .splide__slide:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(8, 10, 11, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.5s ease;
+}
+.recent-project-slide .splide__slide img {
+    width: 100%;
+    height: 470px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.recent-project-slide .splide__slide:hover img {
+    transform: scale(1.08);
+}
+
+.recent-project-slide .splide__arrows {
+      position: absolute;
+      top: -80px; 
+      right: 300px;
+      display: flex;
+      gap: 10px;
+    }
+
+.recent-project-slide .splide__arrow {
+    position: static !important; 
+    background-color: #fff;
+    border:solid 1px #080a0b;
+    color: #fff;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.5s;
+}
+
+.recent-project-slide .splide__arrow:hover {
+    background: var(--primary-clr); 
+    border-color: var(--primary-clr);
+}
+.recent-project-slide .splide__arrow svg {
+    fill: none;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.recent-project-slide .splide__arrow svg path{
+    stroke: #080a0b;
+}
+.recent-project-slide .splide__arrow--prev svg {
+    transform: scaleX(1);
+}
+.recent-project-slide .splide__arrow:hover svg path, 
+.recent-project-slide .splide__arrow:active svg path{
+    stroke: #fff;
+}
+.recent-project-slide .splide__slide .content-slide{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 2rem;
+   z-index: 2;
+   opacity: 0;
+   visibility: hidden;
+   transform: translateY(20px);
+   transition: all 0.5s ease;
+}
+.recent-project-slide .splide__slide .content-slide h4{
+    font-family: 'Outfit', sans-serif;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.recent-project-slide .splide__slide .content-slide a{
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--primary-clr);
+}
+
+.recent-project-slide .splide__slide:hover .content-slide{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.recent-project-slide .splide__slide:hover:after{
+    opacity: 1;
+    visibility: visible;
 }
