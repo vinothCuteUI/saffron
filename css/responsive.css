@@ -1,0 +1,140 @@
+
+/* ========== Small Mobile (portrait phones) ========== */
+@media only screen and (max-width: 767px) {
+    /* Styles for very small devices */
+    .main-header{
+        display: none;
+    }
+    .header-menu{
+        display: none;
+    }
+    .banner-section .carousel-inner .carousel-item{
+        height: 60vh;
+    }
+    .banner-content h2{
+        font-size: 2.3rem;
+    }
+    .banner-content p{
+        font-size: 1rem;
+    }
+    .banner-content p br{
+        display: none;
+    }
+    .about-section{
+        padding: 100px 0 0px;
+    }
+    .page-section{
+        padding-bottom: 60px;
+    }
+    .page-header h2{
+        font-size: 2rem;
+    }
+    .page-header-2 h2{
+        font-size: 2rem;
+    }
+    .page-header-2 h2 br{
+        display: none;
+    }
+    .about-content{
+        margin-top: 2rem;
+    }
+    .abt-img-3{
+        height: 400px;
+        margin-bottom: 2rem;
+    }
+    .abt-card{
+        margin-bottom: 2rem;
+    }
+    .achievement-item{
+        margin-bottom: 2rem;
+    }
+    .service-content .page-overlap-img{
+        display: none;
+    }
+    .service-content .overlap-inner{
+        display: none;
+    }
+    .card-2{
+        margin-bottom: 2rem;
+    }
+    .card-2:after{
+        display: none;
+    }
+    .choose-rt-img-1{
+        height: 500px;
+        margin-bottom: 2rem;
+    }
+    .choose-rt-img-2{
+        height: 200px;
+    }
+    .choose-rt-img-3{
+        height: 200px;
+    }
+    .testimonial:after{
+        width: 100%;
+    }
+    .testimonial-slide::after{
+        width: 100%;
+    }
+    .footer-links{
+        padding-left:0;
+    }
+    .recent-project-slide .splide__arrows{
+        display: none;
+    }
+    .card-4{
+        margin-bottom: 2rem;
+    }
+    .client-logos{
+        border-right: 0;
+        border-bottom: solid 1px #fff;
+        margin-bottom: 2rem;
+    }
+    .brochure-title h2{
+        font-size: 3rem;
+        text-align: center;
+    }
+    .ftr-menu{
+        justify-content: center;
+    }
+    .testimonial-slides .splide__pagination{
+        display: none;
+    }
+}
+
+/* ========== Large Mobile (landscape phones, phablets) ========== */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    /* Styles for bigger phones */
+    .banner-content h2{
+        font-size: 3rem;
+    }
+    .banner-content p{
+        font-size: 1.2rem;
+    }
+    .banner-section .carousel-inner .carousel-item{
+        height: 70vh;
+    }
+}
+
+/* ========== Tablet (portrait tablets) ========== */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    /* Styles for tablets */
+  
+}
+
+/* ========== Small Laptop ========== */
+@media only screen and (min-width: 992px) and (max-width: 1280px) {
+    /* Styles for small laptops */
+  
+}
+
+/* ========== Desktop ========== */
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+    /* Styles for desktops */
+  
+}
+
+/* ========== Large Screen / TV ========== */
+@media only screen and (min-width: 1400px) {
+  
+}

@@ -601,6 +601,7 @@ p{
     background-repeat: repeat;
     background-size: cover;
     border-radius: 15px;
+    height: 100%;
 }
 
 .abt-rt-content h4{
@@ -1308,6 +1309,7 @@ p{
 
 .footer-links {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
     padding-left: 3rem;
