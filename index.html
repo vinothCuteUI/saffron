@@ -12,9 +12,9 @@
 </head>
 <body>
     <!-- Header section Start ------------------->
-    <header class="main-header ">
+    <header class="main-header">
         <!-- Top header info  start --------------------->
-        <div class="top-header-info">
+        <div class="top-header-info d-none d-xl-block">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-8 col-lg-6 ">
@@ -50,7 +50,7 @@
         <!-- Top header info  end --------------------->
         <div class="bottom-header">
             <div class="container">
-                <div class="row align-items-center">
+                <div class="row align-items-center justify-content-between">
                     <div class="col-6 col-lg-3">
                         <div class="logo">
                             <a href="index.html" class="logo-link">
@@ -59,7 +59,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6 header-menu">
+                    <div class="col-lg-6 d-none d-xl-block ">
                         <div class="menu d-flex justify-content-center ">
                             <a href="#" class="menu-link active">Home</a>
                             <a href="#" class="menu-link">About Us</a>
@@ -69,16 +69,67 @@
                             <a href="#" class="menu-link">Policy</a>
                         </div>
                     </div>
-                    <div class="col-6 col-lg-3">
+
+                    <div class="col-6 col-lg-3 ">
                         <div class="header-action d-flex gap-3 justify-content-end align-items-center">
-                            <!-- <button class="header-search-btn "><img src="./images/search.png" alt="header search" class="search-icon"></button> -->
-                            <button class="btn btn-outline-primary btn-with-arrow">Get A Quote <i class="fa-solid fa-arrow-right"></i></button>
+                            <button class="btn btn-outline-primary btn-with-arrow d-none d-xl-inline-block">Get A Quote <i class="fa-solid fa-arrow-right"></i></button>
+                            <button class="mobile-open-btn d-inline-block d-xl-none " id="mobileOpenBtn"><i class="fa-solid fa-bars"></i></button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
+    <!-- Mobile menu -------------->
+    <section class="mobile-menu-section">
+        
+        <div class="mobile-overlap"></div>
+
+        <div class="mobile-container">
+            <div class="mobile-header">
+                <a href="index.html" class="mobile-logo">
+                    <img src="./images/logo.png" alt="logo" />
+                </a>
+                <button class="close-menu" id="closeMobileMenu">
+                    <img src="./images/close-white.png" alt="close btn">
+                </button>
+            </div>
+            <div class="mobile-nav">
+                <a href="#" class="mobile-menu-link active">Home</a>
+                <a href="#" class="mobile-menu-link">About Us</a>
+                <a href="#" class="mobile-menu-link">Services</a>
+                <a href="#" class="mobile-menu-link">Gallery</a>
+                <a href="#" class="mobile-menu-link">Contact</a>
+                <a href="#" class="mobile-menu-link">Policy</a>
+            </div>
+            <div class="mobile-info">
+                <a href="mailto:sample@gmail.com" class="info-link">
+                    <i class="fa-solid fa-envelope"></i>
+                    sample@gmail.com
+                </a>
+                <a href="tel:123534352555" class="info-link">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    +1-2353-4352-555
+                </a>
+            </div>
+            <div class="mobile-social-links">
+                <a href="#" class="social-link">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="#" class="social-link insta">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+            <div class="mobile-btns">
+                <button class="btn btn-primary btn-with-arrow">Get A Quote <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+        
+    </section>
     <!-- Header section end------------------->
 
     <!-- Banner section start------------------->
@@ -107,26 +158,26 @@
     <section class="about-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 abt-lt-content">
+                <div class="col-lg-12 col-xl-4 abt-lt-content">
                     <div class="abt-img-1">
-                        <img src="./images/about-img-1.jpg" class="img-fluid" alt="Who we are?">
+                        <!-- <img src="./images/about-img-1.jpg" class="img-fluid" alt="Who we are?"> -->
                     </div>
-                    <div class="abt-img-2" >
+                    <div class="abt-img-2 mb-5 mb-xl-0 anim-reveal reveal-right" >
                         <span>19+</span>
                         <p>Years Of Experiences</p>
                         <button class="btn-2">Read More <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span></button>
                     </div>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-12 col-xl-8">
                     <div class="page-header-2 about-content">
                         <h3><i class="fa-solid fa-house-chimney"></i> Who We Are</h3>
                         <h2>We combine expertise, innovation, and dedication to deliver results that matter.</h2>
                     </div>
                     <div class="row">
-                        <div class="col-lg-6">
-                            <div class="abt-img-3"></div>
+                        <div class="col-md-6 col-lg-6">
+                            <div class="abt-img-3 anim-reveal reveal-up"></div>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-md-6 col-lg-6">
                             <div class="abt-rt-content mb-5">
                                 <h4>Our Vision</h4>
                                 <p>Our vision is to shape spaces that inspire, blending innovation with functionality to create timeless architecture.</p>
@@ -137,7 +188,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <div class="abt-card">
+                                    <div class="abt-card mb-4 mb-lg-0">
                                         <h4>Across the Globe</h4>
                                         <img src="./images/skyline.png" alt="Globe" />
                                         <div class="abt-card-text">
@@ -170,15 +221,15 @@
      <section class="page-section pt-0">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-5">
+                <div class="col-xl-5">
                     <div class="page-header-2 about-content">
                         <h3><i class="fa-solid fa-house-chimney"></i> Company Services</h3>
                         <h2>We Specialize In These Fields.</h2>
                     </div>
                 </div>
-                <div class="col-lg-7">
-                    <div class="page-header-2 d-flex justify-content-between align-items-end flex-wrap flex-md-nowrap">
-                        <p class="px-0 px-md-5">We provide end-to-end architectural solutions, from concept design to final execution. Our focus is on creating timeless spaces that combine functionality, innovation, and aesthetic beauty.</p>
+                <div class="col-xl-7">
+                    <div class="page-header-2 d-flex justify-content-between align-items-end flex-wrap flex-lg-nowrap">
+                        <p class="px-0 px-xl-5 w-100 w-lg-auto">We provide end-to-end architectural solutions, from concept design to final execution. Our focus is on creating timeless spaces that combine functionality, innovation, and aesthetic beauty.</p>
                         <button class="btn-2" style="flex: 0 0 auto;">View All <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span></button>
                     </div>
                 </div>
@@ -186,9 +237,9 @@
 
             <div class="service-content position-relative py-4">
                 <div class="row">
-                    <div class="col-12 col-lg-8 py-4">
+                    <div class="col-12 col-xl-8 py-4">
                         <div class="row">
-                            <div class="col-12 col-lg-6">
+                            <div class="col-md-6 col-lg-6">
                                 <div class="card-3 mb-4">
                                     <div class="card-3-header">
                                         <div class="card-3-img">
@@ -200,8 +251,8 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-6 mb-4">
-                                <div class="card-3">
+                            <div class="col-md-6 col-lg-6 ">
+                                <div class="card-3 mb-4">
                                     <div class="card-3-header">
                                         <div class="card-3-img">
                                             <img src="./images/art-development.png" alt="Art Development" />
@@ -212,8 +263,8 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-6 mb-4">
-                                <div class="card-3">
+                            <div class="col-md-6 col-lg-6 ">
+                                <div class="card-3 mb-4">
                                     <div class="card-3-header">
                                         <div class="card-3-img">
                                             <img src="./images/house-sketches.png" alt="House Sketches" />
@@ -224,8 +275,8 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-6 mb-4">
-                                <div class="card-3">
+                            <div class="col-md-6 col-lg-6 ">
+                                <div class="card-3 mb-4">
                                     <div class="card-3-header">
                                         <div class="card-3-img">
                                             <img src="./images/building-ideas.png" alt="Building Ideas" />
@@ -239,7 +290,7 @@
                     </div>
                     
                 </div>
-                <div class="page-overlap-img">
+                <div class="page-overlap-img anim-reveal reveal-right">
                 </div>
                 <div class="overlap-inner"></div>
             </div>
@@ -252,7 +303,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-lg-3">
-                    <div class="achievement-item">
+                    <div class="achievement-item mb-5 mb-lg-0">
                         <img src="./images/achievement-icon-1.png" alt="achievement" style="width: 65px;">
                         <div class="achievement-content">
                             <h5>Clients Satisfactions</h5>
@@ -264,7 +315,7 @@
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-3">
-                    <div class="achievement-item">
+                    <div class="achievement-item mb-5 mb-lg-0">
                         <img src="./images/achievement-icon-2.png" alt="achievement">
                         <div class="achievement-content">
                             <h5>Success Projects</h5>
@@ -276,7 +327,7 @@
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-3">
-                    <div class="achievement-item">
+                    <div class="achievement-item mb-5 mb-lg-0">
                         <img src="./images/achievement-icon-3.png" alt="achievement" style="width: 95px;" />
                         <div class="achievement-content">
                             <h5>Team Members</h5>
@@ -288,7 +339,7 @@
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-3">
-                    <div class="achievement-item">
+                    <div class="achievement-item mb-5 mb-lg-0">
                         <img src="./images/achievement-icon-4.png" alt="achievement">
                         <div class="achievement-content">
                             <h5>Clients Satisfactions</h5>
@@ -311,8 +362,8 @@
                 <h2>Our Working Process</h2>
             </div>
             <div class="row">
-                <div class="col-lg-3 work-process">
-                    <div class="card-2">
+                <div class="col-12 col-md-6 col-lg-3 work-process">
+                    <div class="card-2 mb-5 mb-lg-0">
                         <div class="card-2-img">
                             <span class="number-circle">01</span>
                             <img src="./images/project-planing-1.png" alt="Visit project" />
@@ -323,8 +374,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 work-process">
-                    <div class="card-2">
+                <div class="col-12 col-md-6 col-lg-3 work-process">
+                    <div class="card-2 mb-5 mb-lg-0">
                         <div class="card-2-img">
                             <span class="number-circle">02</span>
                             <img src="./images/design-1.png" alt="Planning Design" />
@@ -335,8 +386,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 work-process">
-                    <div class="card-2">
+                <div class="col-12 col-md-6 col-lg-3 work-process">
+                    <div class="card-2 mb-5 mb-lg-0">
                         <div class="card-2-img">
                             <span class="number-circle">03</span>
                             <img src="./images/project-sketch.png" alt="Project Sketch" />
@@ -348,8 +399,8 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3 work-process">
-                    <div class="card-2">
+                <div class="col-12 col-md-6 col-lg-3 work-process">
+                    <div class="card-2 mb-5 mb-lg-0">
                         <div class="card-2-img">
                             <span class="number-circle">04</span>
                             <img src="./images/start-working.png" alt="Start Working" />
@@ -450,7 +501,7 @@
         <div class="container">
             <div class="page-header text-center pb-5">
                 <h4>Why Choose Us</h4>
-                <h2>Why Choose Artima</h2>
+                <h2>Why Choose Saffron</h2>
             </div>
             <div class="row">
                 <div class="col-lg-5 ">
@@ -471,11 +522,11 @@
                     </div>
                 </div>
                 <div class="col-lg-4 pe-4">
-                    <div class="choose-rt-img-1"></div>
+                    <div class="choose-rt-img-1 anim-reveal reveal-up"></div>
                 </div>
                 <div class="col-lg-3">
-                    <div class="choose-rt-img-2 "></div>
-                    <div class="choose-rt-img-3"></div>
+                    <div class="choose-rt-img-2 anim-reveal reveal-left"></div>
+                    <div class="choose-rt-img-3 anim-reveal reveal-right"></div>
                 </div>
             </div>
         </div> 
@@ -497,7 +548,7 @@
         <div class="testimonial-slide">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-7 col-xl-6">
                         <div class="splide testimonial-slides" id="testimonialSlides">
                             <div class="splide__track">
                                 <ul class="splide__list">
@@ -578,8 +629,8 @@
                 <h2>Meet Our Highly Professional Team</h2>
             </div>
             <div class="row">
-                <div class="col-lg-4">
-                    <div class="card-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-4 mb-4 mb-lg-0 anim-reveal reveal-right">
                         <div class="card-4-img">
                             <img src="./images/team-1.jpg" alt="Out team" />
                         </div>
@@ -595,8 +646,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="card-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-4 mb-4 mb-lg-0">
                         <div class="card-4-img">
                             <img src="./images/team-2.jpg" alt="Out team" />
                         </div>
@@ -612,8 +663,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="card-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-4 mb-4 mb-lg-0 anim-reveal reveal-left" >
                         <div class="card-4-img">
                             <img src="./images/team-4.jpg" alt="Out team" />
                         </div>
@@ -693,12 +744,12 @@
         <div class="container">
             <div class="download-shape"></div>
             <div class="row align-items-center ">
-                <div class="col-lg-6">
+                <div class="col-md-6 col-lg-6">
                     <div class="brochure-title">
                         <h2>Download Our <br/>Brochure</h2>
                     </div>
                 </div>
-                <div class="col-lg-6 text-center text-dm-end">
+                <div class="col-md-6 col-lg-6 text-center text-dm-end">
                     <button class="btn-3">Download Now</button>
                 </div>
                 <div class="col-lg-9"></div>
@@ -808,10 +859,10 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-4">
-                    <p class="copyright-text m-0 text-center text-md-start">Copyright © 2025 by Saffron. All Rights Reserved.</p>
+                    <p class="copyright-text mb-0 text-center text-lg-start">Copyright © 2025 by Saffron. All Rights Reserved.</p>
                 </div>
                 <div class="col-lg-4">
-                    <div class="ftr-social-links my-4 my-md-0">
+                    <div class="ftr-social-links my-4 my-lg-0">
                         <a href="#" class="ftr-sl-link"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="#" class="ftr-sl-link"><i class="fa-brands fa-x-twitter"></i></a>
                         <a href="#" class="ftr-sl-link"><i class="fa-brands fa-instagram"></i></a>
@@ -819,7 +870,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <ul class="ftr-menu">
+                    <ul class="ftr-menu ">
                         <li><a href="#">Privacy & Policy</a></li>
                         <li><a href="#">Careers</a></li>
                         <li><a href="#">Media centre</a></li>
@@ -831,6 +882,7 @@
 
 <script src="./js/bootstrap.bundle.min.js"></script>
 <script src="./js/splide.min.js"></script>
+<script src="./js/main.js"></script>
 <script>
     new Splide( '#recentProjectSlide', {
         type      : 'loop',
@@ -845,8 +897,9 @@
         speed     : 1200,   
         easing    : 'ease-in-out', 
         breakpoints: {
-            1024: { perPage: 3, padding: { left: '50px', right: '50px' } },
-            768 : { perPage: 2, padding: { left: '40px', right: '40px' } },
+            1200: { perPage: 3, padding: { left: '50px', right: '50px' } },
+            1024: { perPage: 2, padding: { left: '50px', right: '50px' } },
+            768 : { perPage: 1, padding: { left: '50px', right: '50px' } },
             480 : { perPage: 1, padding: { left: '30px', right: '30px' } },
         },
     }).mount();
@@ -876,7 +929,7 @@
         speed     : 1200,   
         easing    : 'ease-in-out',
         breakpoints: {
-            1024: { perPage: 4},
+            1024: { perPage: 3},
             768 : { perPage: 1},
             480 : { perPage: 2},
         },

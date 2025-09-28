@@ -2,9 +2,7 @@
 /* ========== Small Mobile (portrait phones) ========== */
 @media only screen and (max-width: 767px) {
     /* Styles for very small devices */
-    .main-header{
-        display: none;
-    }
+
     .header-menu{
         display: none;
     }
@@ -37,6 +35,9 @@
     }
     .about-content{
         margin-top: 2rem;
+    }
+    .abt-img-1{
+        height: 500px;
     }
     .abt-img-3{
         height: 400px;
@@ -119,13 +120,102 @@
 /* ========== Tablet (portrait tablets) ========== */
 @media only screen and (min-width: 768px) and (max-width: 992px) {
     /* Styles for tablets */
-  
+
+    .banner-section .carousel-inner .carousel-item{
+        height: 60vh;
+    }
+    .banner-content h2{
+        font-size: 3rem;
+    }
+    .abt-img-1{
+        height: 400px;
+        background-position-y: -480px;
+    }
+    .service-content .page-overlap-img{
+        display: none;
+    }
+    .service-content .overlap-inner{
+        display: none;
+    }
+    .card-2:after{
+        display: none;
+    }
+    .recent-project-slide .splide__arrows{
+        display: none;
+    }
+    .choose-rt-img-1{
+        height: 500px;
+        margin-bottom: 2rem;
+    }
+    .choose-rt-img-2{
+        height: 200px;
+    }
+    .choose-rt-img-3{
+        height: 200px;
+    }
+    .page-header h2{
+        font-size: 2rem;
+    }
+    .page-header-2 h2{
+        font-size: 2rem;
+    }
+    .testimonial:after{
+        width: 100%;
+    }
+    .testimonial-slide::after{
+        width: 100%;
+    }
+    .client-logos{
+        border-right: 0;
+        border-bottom: solid 1px #fff;
+        margin-bottom: 2rem;
+    }
+    .brochure-title h2{
+        font-size: 2.5rem;
+        /* text-align: center;
+        margin-bottom: 2rem; */
+    }
+    .footer-links{
+        padding-left: 0;
+    }
+    .ftr-menu{
+        justify-content: center;
+    }
 }
 
 /* ========== Small Laptop ========== */
 @media only screen and (min-width: 992px) and (max-width: 1280px) {
     /* Styles for small laptops */
-  
+    .page-header h2{
+        font-size: 2rem;
+    }
+    .page-header-2 h2{
+        font-size: 2rem;
+    }
+    .testimonial:after{
+        width: 60%;
+    }
+    .testimonial-slide::after{
+        width: 70%;
+    }
+    .abt-img-1{
+        height: 400px;
+        background-position: center -710px;
+    }
+    .service-content .page-overlap-img{
+        display: none;
+    }
+    .service-content .overlap-inner{
+        display: none;
+    }
+    .card-2:after{
+        left: 82%;
+        width: 48%;
+    }
+    .recent-project-slide .splide__arrows{
+        right: 90px;
+    }
+    
 }
 
 /* ========== Desktop ========== */

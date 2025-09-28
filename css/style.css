@@ -153,6 +153,21 @@ p{
     color: var(--text-body-clr);
     font-size: 1.1rem;
 }
+
+.anim-reveal {
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.anim-reveal.reveal-left { transform: translateX(-100px); }
+.anim-reveal.reveal-right { transform: translateX(100px); }
+.anim-reveal.reveal-up { transform: translateY(100px); }
+
+.anim-reveal.active {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
 /* Button --------------------------------- */
 .btn{
     position: relative;
@@ -243,16 +258,23 @@ p{
 }
 /* Top header style ------------------- */
 .main-header{
-    position: fixed;
+    position: sticky;
     left: 0;
     top: 0;
     right: 0;
     z-index: 1000;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+.main-header.active-top{
+    transform: translateY(-45px);
+    box-shadow: 0 3px 10px -3px #ccc;
 }
 .top-header-info{
     background-color: var(--top-header-bg);
     padding: 0.5rem 0;
 }
+
 .top-contact-info {
     display: flex;
     align-items: center;
@@ -307,6 +329,146 @@ p{
     color: var(--primary-clr);
 }
 
+
+.mobile-menu-section{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1001;
+    overflow: hidden;
+    display: none;
+}
+
+.mobile-overlap{
+    height: 100%;
+    background-color: rgb(8 10 11 / 50%);
+}
+.mobile-container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #080a0b;
+    width: 300px;
+    height: 100vh;
+    transform: translateX(100%);
+}
+
+.mobile-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px #333;
+    padding: 0.5rem 1rem; 
+}
+.mobile-logo{
+    text-decoration: none;
+}
+.mobile-logo img{
+    width: 120px;
+    height: auto;
+}
+.mobile-header .close-menu{
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+}
+.close-menu img{
+    width: 24px;
+}
+.mobile-nav{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.mobile-menu-link{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+}
+.mobile-menu-link.active{
+    color: var(--primary-clr);
+}
+.mobile-info{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.mobile-info a{
+    text-decoration: none;
+    color: #fff;
+}
+.mobile-info a i{
+    color: var(--primary-clr);
+    margin-right: 0.3rem;
+}
+.mobile-social-links {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+.mobile-social-links .social-link{
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--primary-clr);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1;
+    align-content: center;
+}
+.mobile-btns{
+    padding: 1rem;
+}
+.mobile-btns .btn{
+    width: 100%;
+}
+.mobile-open-btn{
+    background-color: transparent;
+    border: 0;
+    font-size: 1.5rem;
+    color: #777;
+}
+.mobile-menu-section.show{
+    display: block;
+}
+
+.mobile-menu-section.show .mobile-container{
+    animation-name: mobileMenu;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes mobileMenu {
+    0%{
+        transform: translateX(100%);
+    }   
+    100%{
+        transform: translateX(0%);
+    } 
+}
+
+.mobile-menu-section.fade .mobile-container{
+    transform: translateX(100%);
+    animation-name: mobileCloseMenu;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes mobileCloseMenu {
+    0%{
+        transform: translateX(0%);
+    }   
+    100%{
+        transform: translateX(100%);
+    } 
+}
 /* Buttom header ----------------- */
 .bottom-header{
     padding: 0.5rem 0;
@@ -570,9 +732,14 @@ p{
 }
 
 .abt-img-1{
+    background-image: url(../images/about-img-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     border-radius: 15px;
     overflow: hidden;
     margin-bottom: 2rem;
+    height: 70%;
 }
 .abt-img-2{
     border-radius: 15px;
@@ -580,7 +747,7 @@ p{
     background-repeat: no-repeat;
     background-size: cover;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) , rgba(0, 0, 0, 0.5)), url(../images/about-img-2.webp);
-    padding: 2rem;
+    padding: 1.8rem 2rem;
     text-align: center;
 }
 .abt-img-2 span{
@@ -1108,7 +1275,7 @@ p{
     position: relative;
 }
 .card-4-img{
-    height: 480px;
+    /* height: 480px; */
     overflow: hidden;
     position: relative;
 }
