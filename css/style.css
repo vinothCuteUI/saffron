@@ -256,6 +256,19 @@ p{
     background-color: var(--primary-clr);
     color: #fff;
 }
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 /* Top header style ------------------- */
 .main-header{
     position: sticky;
@@ -474,7 +487,50 @@ p{
     padding: 0.5rem 0;
     background-color: #fff;
 }
+.banner-form{
+    background-color: rgb(255 255 255 / 60%);
+    padding: 2rem;
+    border-radius: 10px;
+    border: solid 1px #ccc;
+}
+.form-group .form-control, 
+.form-group .form-select{
+    height: 55px;
+    border-radius: 10px;
+}
+.form-group .form-control:focus, 
+.form-group .form-select:focus{
+    outline: 0;
+    border-color: var(--primary-clr);
+    box-shadow: none;
+}
+.form-submit .btn{
+    width: 100%;
+}
 
+/* Whatsapp action --------------- */
+.whatsapp-action{
+    position: fixed;
+    bottom: 2rem;
+    right: 1.5rem;
+    background-color: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    z-index: 999;
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 60px;
+    box-shadow: 0 3px 10px -3px #777;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+.whatsapp-action:hover{
+    color: #fff;
+    transform: scale(1.1);
+}
 /* Logo --------- */
 .logo-link{
     display: inline-block;

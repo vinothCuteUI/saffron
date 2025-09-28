@@ -9,7 +9,6 @@ window.scrollBy({
 let mainHeader = document.querySelector(".main-header");
 
 window.addEventListener("scroll", function(event){
-    console.log("window.screenY", window.scrollY )
     if(window.scrollY > 80){
         mainHeader.classList.add("active-top")
     }else{
@@ -40,14 +39,41 @@ closeMobileMenu.addEventListener("click", (e) => {
 // Page scroll animation
 const sectionReveal = document.querySelectorAll('.anim-reveal');
 
-const observer = new IntersectionObserver((entries) => {
+const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('active');
-      // Uncomment next line if you want it only once
-      observer.unobserve(entry.target);
+      sectionObserver.unobserve(entry.target);
     }
   });
 }, { threshold: 0.2 });
 
-sectionReveal.forEach(sec => observer.observe(sec));
+sectionReveal.forEach(sec => sectionObserver.observe(sec));
+
+//Counter event
+const counterObserver = new IntersectionObserver((elm) => {
+  elm.forEach(entry => {
+    if (entry.isIntersecting) {
+        let node = entry.target
+        let val = Number(node.innerHTML);
+        runCounter(node, val)
+    }
+  });
+}, { threshold: 0.2 });
+let numberCount = document.querySelectorAll(".anim-number")
+
+function runCounter(targetElm, value){
+    let count = 0;
+    let startCount = setInterval(()=> {
+        if(count == value){
+            clearInterval(startCount)
+            return
+        }
+        count +=1;
+        targetElm.innerHTML = new Intl.NumberFormat("en-IN").format(count);
+    }, 20)
+}
+
+numberCount.forEach((item) => {
+    counterObserver.observe(item)
+})

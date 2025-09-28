@@ -153,8 +153,29 @@
                         </div>
                     </div>
                     <div class="col-xl-5">
-                        <form class="banner-form">
-                            
+                        <form class="banner-form" >
+                            <div class="form-title text-center mb-4">
+                                <h3>Get Your Quote</h3>
+                            </div>
+                            <div class="form-group mb-4">
+                                <input type="text" class="form-control" id="userName" placeholder="Your name">
+                            </div>
+                            <div class="form-group mb-4">
+                                <input type="number" class="form-control" id="phone" placeholder="Mobile number">
+                            </div>
+                            <div class="form-group mb-4">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option value="null">Service Type</option>
+                                    <option value="civil">Civil</option>
+                                    <option value="Interiors">Interiors</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-4">
+                                <input type="text" class="form-control" id="city" placeholder="Your city">
+                            </div>
+                            <div class="form-submit">
+                                <button class="btn btn-primary">Get Free Quote Now</button>
+                            </div>
                         </diformv>
                     </div>
                 </div>
@@ -201,7 +222,7 @@
                                         <h4>Across the Globe</h4>
                                         <img src="./images/skyline.png" alt="Globe" />
                                         <div class="abt-card-text">
-                                            <span>90 +</span>
+                                            <span><span class="anim-number">90</span> +</span>
                                             <p>Office Worldwide</p>
                                         </div>
                                     </div>
@@ -211,7 +232,7 @@
                                         <h4>Regional Insight</h4>
                                         <img src="./images/hospital.png" alt="Regional" />
                                         <div class="abt-card-text">
-                                            <span>1,550 +</span>
+                                            <span><span class="anim-number">1550</span> +</span>
                                             <p>Employees</p>
                                         </div>
                                     </div>
@@ -318,7 +339,7 @@
                             <h5>Clients Satisfactions</h5>
                             <div class="achiev-line"></div>
                             <div class="achievement-number">
-                                <span class="achievement-count">15</span>+
+                                <span class="achievement-count anim-number">15</span>+
                             </div>
                         </div>
                     </div>
@@ -330,7 +351,7 @@
                             <h5>Success Projects</h5>
                             <div class="achiev-line"></div>
                             <div class="achievement-number">
-                                <span class="achievement-count">600</span>+
+                                <span class="achievement-count anim-number">600</span>+
                             </div>
                         </div>
                     </div>
@@ -342,7 +363,7 @@
                             <h5>Team Members</h5>
                             <div class="achiev-line"></div>
                             <div class="achievement-number">
-                                <span class="achievement-count">40</span>+
+                                <span class="achievement-count anim-number">40</span>+
                             </div>
                         </div>
                     </div>
@@ -354,7 +375,7 @@
                             <h5>Clients Satisfactions</h5>
                             <div class="achiev-line"></div>
                             <div class="achievement-number">
-                                <span class="achievement-count">500</span>+
+                                <span class="achievement-count anim-number">500</span>+
                             </div>
                         </div>
                     </div>
@@ -889,6 +910,9 @@
         </div>
     </div>
 
+    <a href="https://wa.link/69su2q" target="_blank" class="whatsapp-action">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 <script src="./js/bootstrap.bundle.min.js"></script>
 <script src="./js/splide.min.js"></script>
 <script src="./js/main.js"></script>
@@ -944,10 +968,9 @@
         },
     }).mount();
  
-    // const od = document.getElementById('od2');
-    // // Odometer automatically reads innerText as starting value.
+    // const od = document.getElementById('achiev-num-1');
     // document.getElementById('od2btn').addEventListener('click', () => {
-    //     od.innerText = 98765; // library animates automatically
+    //     od.innerText = 15; 
     // });
     // options via window.odometerOptions = { format: '(,ddd)', duration: 2000 };
 </script>
