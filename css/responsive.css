@@ -6,8 +6,11 @@
     .header-menu{
         display: none;
     }
+    .main-header.active-top{
+        transform: translateY(0);
+    }
     .banner-section .carousel-inner .carousel-item{
-        height: 60vh;
+        height: 120vh;
     }
     .banner-content h2{
         font-size: 2.3rem;
@@ -122,7 +125,7 @@
     /* Styles for tablets */
 
     .banner-section .carousel-inner .carousel-item{
-        height: 60vh;
+        height: 110vh;
     }
     .banner-content h2{
         font-size: 3rem;
