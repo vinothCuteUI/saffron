@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png" />
+    <title>About Us | Saffron</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./css/splide.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header section Start ------------------->
+    <header class="main-header">
+        <!-- Top header info  start --------------------->
+        <div class="top-header-info d-none d-xl-block">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-8 col-lg-6 ">
+                        <div class="top-contact-info">
+                            <a href="mailto:sample@gmail.com" class="info-link">
+                                <i class="fa-solid fa-envelope"></i>
+                                sample@gmail.com
+                            </a>
+                            <a href="tel:123534352555" class="info-link">
+                                <i class="fa-solid fa-phone-volume"></i>
+                                +1-2353-4352-555
+                            </a>
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-4 col-lg-6 ">
+                        <div class="top-social-info ">
+                            <a href="#" class="social-link">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link insta">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top header info  end --------------------->
+        <div class="bottom-header">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-6 col-lg-3">
+                        <div class="logo">
+                            <a href="index.html" class="logo-link">
+                                <img src="./images/logo.png" alt="Saffron"  class="logo-img"/>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 d-none d-xl-block ">
+                        <div class="menu d-flex justify-content-center ">
+                            <a href="index.html" class="menu-link">Home</a>
+                            <a href="about-us.html" class="menu-link active">About Us</a>
+                            <a href="#" class="menu-link">Services</a>
+                            <a href="interiors.html" class="menu-link">Interiors </a>
+                            <a href="#" class="menu-link">Contact</a>
+                            <a href="#" class="menu-link">Policy</a>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-3 ">
+                        <div class="header-action d-flex gap-3 justify-content-end align-items-center">
+                            <button class="btn btn-outline-primary btn-with-arrow d-none d-xl-inline-block">Get A Quote <i class="fa-solid fa-arrow-right"></i></button>
+                            <button class="mobile-open-btn d-inline-block d-xl-none " id="mobileOpenBtn"><i class="fa-solid fa-bars"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile menu -------------->
+    <section class="mobile-menu-section">
+        
+        <div class="mobile-overlap"></div>
+
+        <div class="mobile-container">
+            <div class="mobile-header">
+                <a href="index.html" class="mobile-logo">
+                    <img src="./images/logo.png" alt="logo" />
+                </a>
+                <button class="close-menu" id="closeMobileMenu">
+                    <img src="./images/close-white.png" alt="close btn">
+                </button>
+            </div>
+            <div class="mobile-nav">
+                <a href="index.html" class="mobile-menu-link">Home</a>
+                <a href="about-us.html" class="mobile-menu-link active">About Us</a>
+                <a href="#" class="mobile-menu-link">Services</a>
+                <a href="interiors.html" class="mobile-menu-link">Interiors </a>
+                <a href="#" class="mobile-menu-link">Contact</a>
+                <a href="#" class="mobile-menu-link">Policy</a>
+            </div>
+            <div class="mobile-info">
+                <a href="mailto:sample@gmail.com" class="info-link">
+                    <i class="fa-solid fa-envelope"></i>
+                    sample@gmail.com
+                </a>
+                <a href="tel:123534352555" class="info-link">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    +1-2353-4352-555
+                </a>
+            </div>
+            <div class="mobile-social-links">
+                <a href="#" class="social-link">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="#" class="social-link insta">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+            <div class="mobile-btns">
+                <button class="btn btn-primary btn-with-arrow">Get A Quote <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+        
+    </section>
+    <!-- Header section end------------------->
+
+    <!-- Page sub banner -------------->
+    <section class="page-subbanner" style="background-image: url(./images/img-2.jpg);">
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-7">
+                    <div class="page-subtitle">
+                        <h2>About Us</h2>
+                        <p>The Interior speak for themselves</p>
+                    </div>
+                </div>
+                <div class="col-lg-5 align-self-lg-end">
+                    <ul class="page-breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active">About Us</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page sub banner end -------------->
+
+    <!-- About section start ------------------->
+    <section class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-xl-4 abt-lt-content">
+                    <div class="abt-img-1">
+                        <!-- <img src="./images/about-img-1.jpg" class="img-fluid" alt="Who we are?"> -->
+                    </div>
+                    <div class="abt-img-2 mb-5 mb-xl-0 anim-reveal reveal-right" >
+                        <span>19+</span>
+                        <p>Years Of Experiences</p>
+                        <button class="btn-2">Read More <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span></button>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-xl-8">
+                    <div class="page-header-2 about-content">
+                        <h3><i class="fa-solid fa-house-chimney"></i> Who We Are</h3>
+                        <p>At <strong>Saffron Interiors & Engineering,</strong> we go beyond design—we <strong>craft experiences and build with precision</strong>. With over <strong>15 years of excellence</strong> in interiors, construction, and project management, we are trusted partners for homeowners and businesses who seek <strong>luxury, functionality, and lasting value.</strong></p>
+
+                        <p>Founded with a vision to redefine living and working spaces, Saffron Interiors & Engineering has evolved into a <strong>complete design & build powerhouse</strong>. From elegant homes and stylish offices to large commercial projects and industrial spaces, we deliver solutions that combine <strong>aesthetic brilliance with engineering precision</strong>.</p>
+                        <p>Every project we handle is unique—and so is our approach. Whether it’s a <strong>luxury villa makeover, a turnkey office setup, or project management consulting</strong> for large-scale construction, we ensure <strong>100% quality, transparency, and client satisfaction</strong>.</p>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6">
+                            <div class="abt-img-3 anim-reveal reveal-up"></div>
+                        </div>
+                        <div class="col-md-6 col-lg-6">
+                            <div class="abt-rt-content mb-5">
+                                <h4>Our Vision</h4>
+                                <p>To be the most trusted name in interiors and construction, setting benchmarks in design, execution, and project management across India.</p>
+                            </div>
+                            <div class="abt-rt-content mb-5">
+                                <h4>Our Mission</h4>
+                                <p>To provide affordable luxury living through innovative design, quality construction and customer-first service. Our Motto: “Affordable Luxury Living”</p>
+                            </div>
+                            <div class="abt-rt-content mb-5">
+                                <h4>Our Promise</h4>
+                                <p>At Saffron Interiors & Engineering, we promise more than design and build—we promise peace of mind. From the first sketch to the final handover, we ensure every detail reflects excellence, elegance, and trust.</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About section end ------------------->
+     
+    <!-- About section start ------------------->
+    <section class="about-section d-none">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 abt-lt-content">
+                    <div class="abt-lt-img-1">
+                        <img src="./images/about-saffron-1.png" alt="about Saffron" />
+                    </div>
+                    <div class="abt-lt-img-2">
+                        <img src="./images/about-saffron-2.png" alt="about Saffron" />
+                    </div>
+                    <!-- <div class="abt-lt-text">
+                        <h2>70%</h2>
+                        <h4>Happy <br />Customer</h4>
+                    </div> -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h4>About Company</h4>
+                        <!-- <h2>Creating Inspiring Spaces Discover Premier Interior Design Experts</h2> -->
+                        <p>At <strong>Saffron Interiors & Engineering,</strong> we go beyond design—we <strong>craft experiences and build with precision</strong>. With over <strong>15 years of excellence</strong> in interiors, construction, and project management, we are trusted partners for homeowners and businesses who seek <strong>luxury, functionality, and lasting value.</strong></p>
+
+                        <ul class="list">
+                            <li><i class="fa-solid fa-check"></i> Design</li>
+                            <li><i class="fa-solid fa-check"></i> Build</li>
+                            <li><i class="fa-solid fa-check"></i> Deliver</li>
+                        </ul>
+
+                         <h4>Our Story</h4>
+                        <p>Founded with a vision to redefine living and working spaces, Saffron Interiors & Engineering has evolved into a <strong>complete design & build powerhouse</strong>. From elegant homes and stylish offices to large commercial projects and industrial spaces, we deliver solutions that combine <strong>aesthetic brilliance with engineering precision</strong>.</p>
+                        <p>Every project we handle is unique—and so is our approach. Whether it’s a <strong>luxury villa makeover, a turnkey office setup, or project management consulting</strong> for large-scale construction, we ensure <strong>100% quality, transparency, and client satisfaction</strong>.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-5">
+                <div class="col-lg-4">
+                    <div class="card-5" style="background-image: url(./images/img-3.webp);">
+                        <div class="card-5-content">
+                            <h4>Our Vision</h4>
+                            <p>To be the most trusted name in interiors and construction, setting benchmarks in design, execution, and project management across India.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4" >
+                    <div class="card-5" style="background-image: url(./images/img-4.jpg);">
+                        <div class="card-5-content">
+                            <h4>Our Mission</h4>
+                            <p>To provide affordable luxury living through innovative design, quality construction and customer-first service. Our Motto: “Affordable Luxury Living”</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-5" style="background-image: url(./images/img-5.webp);">
+                        <div class="card-5-content">
+                            <h4>Our Promise</h4>
+                            <p>At Saffron Interiors & Engineering, we promise more than design and build—we promise peace of mind. From the first sketch to the final handover, we ensure every detail reflects excellence, elegance, and trust.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About section end ------------------->
+    <section class="page-section our-expertise">
+        <div class="container">
+            <div class="page-header about-content">
+                <h4>Expertise</h4>
+                <h2>Our Expertise</h2>
+            </div>
+            <div class="slider1">
+                <div class="splide expertise-slide" id="expertiesSlider">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <div class="slide-img-box" style="background-image: url(./images/home-interiors.jpg);">
+                                    <span>Interior Solutions</span>
+                                </div>
+                                
+                                <div class="content-slide">
+                                    <h4>Home Interiors </h4>
+                                    <p>From premium apartments to luxury villas, tailored designs for modern living.</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="slide-img-box" style="background-image: url(./images/office-interiors.jpg);">
+                                    <span>Interior Solutions</span>
+                                </div>
+                                <div class="content-slide">
+                                    <h4>Office Interiors </h4>
+                                    <p>Smart, stylish, and functional workspaces for productivity.</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="slide-img-box" style="background-image: url(./images/warehouse-interiors.jpg);">
+                                    <span>Interior Solutions</span>
+                                </div>
+                                <div class="content-slide">
+                                    <h4>Warehouse Interiors</h4>
+                                    <p>Organised, efficient, and durable solutions for industrial needs.</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="slide-img-box" style="background-image: url(./images/about-img-3.webp)">
+                                    <span>Interior Solutions</span>
+                                </div>
+                                <div class="content-slide">
+                                    <h4>Complete Fit-Outs (Turnkey)</h4>
+                                    <p>From concept to handover, including civil, interiors, MEP, HVAC & other related services.</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="slide-img-box" style="background-image: url(./images/interiors-2.jpg);">
+                                    <span>Construction Solutions</span>
+                                </div>
+                                <div class="content-slide">
+                                    <h4>Home Construction</h4>
+                                    <p>From Design to Handover. Our Motto: “Affordable Luxury living”.</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="slide-img-box" style="background-image: url(./images/img-4.jpg);">
+                                    <span>Construction Solutions</span>
+                                </div>
+                                <div class="content-slide">
+
+                                    <h4>Commercial Construction</h4>
+                                    <p>We build space for offices, showrooms, and other businesses according to client requirements.</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="slide-img-box" style="background-image: url(./images/img-7.jpg);">
+                                    <span>Project Management Consulting</span>
+                                </div>
+                                <div class="content-slide">
+                                    <h4>Expert Guidance</h4>
+                                    <p>For clients who need professional oversight.</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="slide-img-box" style="background-image: url(./images/img-8.jpg);">
+                                    <span>Project Management Consulting</span>
+                                </div>
+                                <div class="content-slide">
+                                    <h4>Budgeting & BOQ</h4>
+                                    <p>Transparent cost planning and material evaluation.</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="slide-img-box" style="background-image: url(./images/about-saffron-1.png);">
+                                    <span>Project Management Consulting</span>
+                                </div>
+                                <div class="content-slide">
+                                    <h4>Design Drawings & Testing</h4>
+                                    <p>Ensuring accuracy, quality, and feasibility.</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="slide-img-box" style="background-image: url(./images/img-9.jpg);">
+                                    <span>Project Management Consulting</span>
+                                </div>
+                                <div class="content-slide">
+                                    <h4>Site Measurements & Quality Checks</h4>
+                                    <p>To maintain standards at every stage. Ideal for clients with limited knowledge, giving them confidence that their investment is safe.</p>
+                                </div>
+                            </li>
+
+                            <li class="splide__slide">
+                                <div class="slide-img-box" style="background-image: url(./images/img-10.jpg);">
+                                    <span>Turnkey Projects</span>
+                                </div>
+                                <div class="content-slide">
+                                    <h4>Residential Turnkey</h4>
+                                    <p>End-to-end delivery: Civil, Interiors, Appliances, AC, Internet, furniture—everything ready for you to move in.</p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="slide-img-box" style="background-image: url(./images/img-11.jpg);">
+                                    <span>Turnkey Projects</span>
+                                </div>
+                                <div class="content-slide">
+                                    <h4>Commercial Turnkey</h4>
+                                    <p>Complete business-ready solutions for offices, showrooms, and workspaces.</p>
+                                </div>
+                            </li>   
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </section>
+     <!-- Why choose us section start ------------------->
+    <section class="page-section">
+        <div class="container">
+            <div class="page-header text-center pb-5">
+                <h4>Why Choose Us</h4>
+                <h2>Why Choose Saffron Interiors & Construction</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 ">
+                    <div class="list-card-item pe-5">
+                        <img src="./images/art-development.png" class="choose-img" alt="Complete Solutions" />
+                        <h3>Complete Solutions Under One Roof </h3>
+                        <p>Construction, Interiors, Turnkey, and Consulting.</p>
+                    </div>
+                    <div class="list-card-item pe-5">
+                        <img src="./images/teams.png" class="choose-img" alt="15+ Years of Experience" />
+                        <h3>15+ Years of Experience</h3>
+                        <p>Proven expertise across diverse projects.</p>
+                    </div>
+                    <div class="list-card-item pe-5">
+                        <img src="./images/quality.png" class="choose-img" alt="Quality Guarantee" />
+                        <h3>100% Quality Guarantee</h3>
+                        <p>From design to final handover.</p>
+                    </div>
+                    <div class="list-card-item pe-5">
+                        <img src="./images/premium.png" class="choose-img" alt="Premium Yet Practical" />
+                        <h3>Premium Yet Practical </h3>
+                        <p> Luxury with value-driven planning.</p>
+                    </div>
+                    <div class="list-card-item pe-5">
+                        <img src="./images/customer-review.png" class="choose-img" alt="Client-Centric Approach" />
+                        <h3>Client-Centric Approach</h3>
+                        <p>Personalised designs, transparent process, and professional delivery.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 pe-4">
+                    <div class="choose-rt-img-1 anim-reveal reveal-up"></div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="choose-rt-img-2 anim-reveal reveal-left"></div>
+                    <div class="choose-rt-img-3 anim-reveal reveal-right"></div>
+                </div>
+            </div>
+        </div> 
+    </section>
+    <!-- Why choose us section end ------------------->
+
+
+
+<footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-abt mb-5">
+                        <div class="ftr-logo">
+                            <img src="./images/logo.png" alt="Logo"/>
+                            <p>we are passionate about creating exceptional interior spaces that inspire, delight, and enhance the lives of our clients.</p>
+                        </div>
+                        <div class="ftr-input">
+                            <input type="email" placeholder="Enter your email address" />
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </div> 
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="footer-links ">
+                        <div class="ftr-nav mb-5">
+                            <h4>Useful Links</h4>
+                            <ul class="ftr-list">
+                                <li class="ftr-link">
+                                    <a href="#" ><i class="fa-solid fa-angle-right"></i> <span>About Company</span></a>
+                                </li>
+                                <li class="ftr-link">
+                                    <a href="#" ><i class="fa-solid fa-angle-right"></i> <span>Customer Insights</span></a>
+                                </li>
+                                <li class="ftr-link">
+                                    <a href="#" ><i class="fa-solid fa-angle-right"></i> <span>Meet Our Team</span></a>
+                                </li>
+                                <li class="ftr-link">
+                                    <a href="#" ><i class="fa-solid fa-angle-right"></i> <span>Client Testimonial</span></a>
+                                </li>
+                                <li class="ftr-link">
+                                    <a href="#" ><i class="fa-solid fa-angle-right"></i> <span>Privacy Policy</span></a>
+                                </li>
+                                <li class="ftr-link">
+                                    <a href="#" ><i class="fa-solid fa-angle-right"></i> <span>Before After</span></a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="ftr-nav mb-5">
+                            <h4>Our Services</h4>
+                            <ul class="ftr-list">
+                                <li class="ftr-link">
+                                    <a href="#" ><i class="fa-solid fa-angle-right"></i> <span>Before After</span></a>
+                                </li>
+                                <li class="ftr-link">
+                                    <a href="#" ><i class="fa-solid fa-angle-right"></i> <span>Blog Grid</span></a>
+                                </li>
+                                <li class="ftr-link">
+                                    <a href="#" ><i class="fa-solid fa-angle-right"></i> <span>Contact Us</span></a>
+                                </li>
+                                <li class="ftr-link">
+                                    <a href="#" ><i class="fa-solid fa-angle-right"></i> <span>Pricing Plan</span></a>
+                                </li>
+                                <li class="ftr-link">
+                                    <a href="#" ><i class="fa-solid fa-angle-right"></i> <span>Projects</span></a>
+                                </li>
+                                <li class="ftr-link">
+                                    <a href="#" ><i class="fa-solid fa-angle-right"></i> <span>Team</span></a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="ftr-nav mb-5">
+                            <h4>Contact Us</h4>
+
+                            <ul class="ftr-contact-info">
+                                <li class="ftr-contact">
+                                    <i class="fa-solid fa-phone-volume"></i>
+                                    <h5>Phone Number</h5>
+                                    <a href="tel:123534352555">+888 (123) 869523</a>
+                                </li>
+                                <li class="ftr-contact">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <h5>Email Address</h5>
+                                    <a href="mailto:example@gmail.com">example@gmail.com</a>
+                                </li>
+                                <li class="ftr-contact">
+                                    <i class="fa-solid fa-map-location-dot"></i>
+                                    <h5>Location</h5>
+                                    <a href="#">1058 Helton Ave, Stky Berlin, <br/>Germany</a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    
+
+                </div>
+                
+            </div>
+        </div>
+        
+    </footer>
+    <div class="footer-details">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    <p class="copyright-text mb-0 text-center text-lg-start">Copyright © 2025 by Saffron. All Rights Reserved.</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="ftr-social-links my-4 my-lg-0">
+                        <a href="#" class="ftr-sl-link"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="ftr-sl-link"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="ftr-sl-link"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="ftr-sl-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <ul class="ftr-menu ">
+                        <li><a href="#">Privacy & Policy</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Media centre</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.link/69su2q" target="_blank" class="whatsapp-action">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/splide.min.js"></script>
+<script src="./js/main.js"></script>
+<script>
+    new Splide( '#expertiesSlider', {
+        type      : 'loop',
+        perPage   : 3,
+        gap       : '20px',
+        padding   : { left: '0px', right: '0px' }, 
+        autoplay  : true,
+        interval  : 3000,
+        pauseOnHover: true,
+        arrows    : false,
+        pagination: true, 
+        speed     : 1200,   
+        easing    : 'ease-in-out', 
+        breakpoints: {
+            1200: { perPage: 3, padding: { left: '0px', right: '0px' } },
+            1024: { perPage: 2, padding: { left: '0px', right: '0px' } },
+            768 : { perPage: 2, padding: { left: '0px', right: '0px' } },
+            480 : { 
+                perPage: 1, 
+                padding: { left: '0px', right: '0px' },
+             },
+        },
+    }).mount();
+</script>
+</body>
+</html>

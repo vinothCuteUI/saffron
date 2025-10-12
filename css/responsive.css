@@ -104,6 +104,13 @@
     .testimonial-slides .splide__pagination{
         display: none;
     }
+    .page-subbanner{
+        padding: 10rem 0 6rem;
+    }
+    .page-breadcrumb{
+        margin-top: 2rem;
+        justify-content: start;
+    }
 }
 
 /* ========== Large Mobile (landscape phones, phablets) ========== */
@@ -123,7 +130,9 @@
 /* ========== Tablet (portrait tablets) ========== */
 @media only screen and (min-width: 768px) and (max-width: 992px) {
     /* Styles for tablets */
-
+    .main-header.active-top{
+        transform: translateY(-4px);
+    }
     .banner-section .carousel-inner .carousel-item{
         height: 110vh;
     }
@@ -183,6 +192,13 @@
     }
     .ftr-menu{
         justify-content: center;
+    }
+    .page-subbanner{
+        padding: 10rem 0 5rem;
+    }
+    .page-breadcrumb{
+        justify-content: start;
+        margin-top: 2rem;
     }
 }
 
