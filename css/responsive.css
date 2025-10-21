@@ -105,11 +105,70 @@
         display: none;
     }
     .page-subbanner{
-        padding: 10rem 0 6rem;
+        padding: 6rem 0 5rem;
     }
     .page-breadcrumb{
         margin-top: 2rem;
         justify-content: start;
+    }
+    .page-subtitle h2{
+        font-size: 2rem;
+    }
+    .page-subtitle p{
+        font-size: 1rem;
+    }
+    .about-section-2{
+        padding-bottom: 100px;
+    }
+    .about-section-2 .row{
+        flex-direction: column-reverse;
+    }
+    .abt-lt-img-shape{
+        display: none;
+    }
+    .abt-lt-img-1,
+    .abt-lt-img-2{
+        position: relative;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin-bottom: 1.5rem;
+        width: 100%;
+    }
+    .abt-lt-text{
+        position: relative;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+    .about-content-2{
+        margin-top: 0;
+        padding-top: 0;
+        margin-bottom: 2rem;
+    }
+    .service-center-content{
+        flex-wrap: wrap;
+
+    }
+    .service-center-list{
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+
+    .service-center-list .service-center-item{
+        text-align: center;
+    }
+    .service-center-list .service-center-item.service-center-lt-item{
+        text-align: center;
+    }
+    .center-img-cirlce{
+        width: 100%;
+    }
+    .faq-accordion .accordion-button{
+        font-size: 1.4rem;
+    }
+    .brochure-title p{
+        text-align: center;
     }
 }
 
@@ -200,10 +259,54 @@
         justify-content: start;
         margin-top: 2rem;
     }
+    .page-subtitle h2{
+        font-size: 2.5rem;
+    }
+    .page-subtitle p{
+        font-size: 1.2rem;
+    }
+    .about-section-2{
+        padding-bottom: 100px;
+    }
+    .abt-lt-img-shape{
+        top: -2rem;
+        left: -2rem;
+    }
+    .abt-lt-img-1{
+        left: 3rem;
+    }
+    .abt-lt-content{
+        height: 560px;
+    }
+    .abt-lt-text{
+        bottom: 10px;
+        left: 15%;
+    }
+    .service-center-content{
+        flex-wrap: wrap;
+
+    }
+    .service-center-list{
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+
+    .service-center-list .service-center-item{
+        text-align: center;
+    }
+    .service-center-list .service-center-item.service-center-lt-item{
+        text-align: center;
+    }
+    /* .center-img-cirlce{
+        width: 100%;
+    } */
 }
 
 /* ========== Small Laptop ========== */
 @media only screen and (min-width: 992px) and (max-width: 1280px) {
+    .main-header.active-top{
+        transform: translateY(-1px);
+    }
     /* Styles for small laptops */
     .page-header h2{
         font-size: 2rem;
@@ -234,7 +337,41 @@
     .recent-project-slide .splide__arrows{
         right: 90px;
     }
-    
+    .page-subbanner{
+        padding: 10rem 0 5rem;
+    }
+    .page-subtitle h2{
+        font-size: 2.5rem;
+    }
+    .page-subtitle p{
+        font-size: 1.2rem;
+    }
+    .card-2:after{
+        display: none;
+    }
+    .center-img-cirlce{
+        width: 300px;
+        height: 300px;
+    }
+    .service-center-list{
+        width: 320px;
+        padding: 2rem;
+    }
+    .service-center-list .service-center-item{
+        font-size: 1rem;
+    }
+    .faq-accordion .accordion-button{
+        font-size: 1.4rem;
+    }
+    .faq-accordion .accordion-button span{
+        top: 1.2rem;
+    }
+    .faq-img h4{
+        font-size: 1.4rem;
+    }
+    .brochure-title h2{
+        font-size: 2.5rem;
+    }
 }
 
 /* ========== Desktop ========== */

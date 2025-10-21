@@ -392,9 +392,9 @@
                 <h4>Working Process</h4>
                 <h2>Our Working Process</h2>
             </div>
-            <div class="row">
-                <div class="col-12 col-md-6 col-lg-3 work-process">
-                    <div class="card-2 mb-5 mb-lg-0">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 work-process">
+                    <div class="card-2 mb-5 mb-xl-0">
                         <div class="card-2-img">
                             <span class="number-circle">01</span>
                             <img src="./images/project-planing-1.png" alt="Visit project" />
@@ -405,8 +405,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-3 work-process">
-                    <div class="card-2 mb-5 mb-lg-0">
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 work-process">
+                    <div class="card-2 mb-5 mb-xl-0">
                         <div class="card-2-img">
                             <span class="number-circle">02</span>
                             <img src="./images/design-1.png" alt="Planning Design" />
@@ -417,8 +417,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-3 work-process">
-                    <div class="card-2 mb-5 mb-lg-0">
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 work-process">
+                    <div class="card-2 mb-5 mb-xl-0">
                         <div class="card-2-img">
                             <span class="number-circle">03</span>
                             <img src="./images/project-sketch.png" alt="Project Sketch" />
@@ -430,8 +430,8 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-md-6 col-lg-3 work-process">
-                    <div class="card-2 mb-5 mb-lg-0">
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 work-process">
+                    <div class="card-2 mb-5 mb-xl-0">
                         <div class="card-2-img">
                             <span class="number-circle">04</span>
                             <img src="./images/start-working.png" alt="Start Working" />
@@ -464,35 +464,35 @@
                             <img src="./images/recent-project-1.jpg" alt="Residential projects">
                             <div class="content-slide">
                                 <h4>Residential projects</h4>
-                                <a href="#">Explore More <i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="javascript:void(0)">Explore More <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </li>
                         <li class="splide__slide">
                             <img src="./images/recent-project-2.jpg" alt="Eco-friendly design">
                             <div class="content-slide">
                                 <h4>Eco-friendly design</h4>
-                                <a href="#">Explore More <i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="javascript:void(0)">Explore More <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </li>
                         <li class="splide__slide">
                             <img src="./images/recent-project-3.jpg" alt="Family Apartment" />
                             <div class="content-slide">
                                 <h4>Family Apartment</h4>
-                                <a href="#">Explore More <i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="javascript:void(0)">Explore More <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </li>
                         <li class="splide__slide">
                             <img src="./images/recent-project-1.jpg" alt="Custom furniture" />
                             <div class="content-slide">
                                 <h4>Custom furniture</h4>
-                                <a href="#">Explore More <i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="javascript:void(0)">Explore More <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </li>
                         <li class="splide__slide">
                             <img src="./images/recent-project-2.jpg" alt="Residential projects" />
                             <div class="content-slide">
                                 <h4>Residential projects</h4>
-                                <a href="#">Explore More <i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="javascript:void(0)">Explore More <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </li>
                         <li class="splide__slide">
@@ -500,14 +500,14 @@
                             <div class="content-slide">
 
                                 <h4>Family Apartment</h4>
-                                <a href="#">Explore More <i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="javascript:void(0)">Explore More <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </li>
                         <li class="splide__slide">
                             <img src="./images/recent-project-1.jpg" alt="" />
                             <div class="content-slide">
                                 <h4>Residential projects</h4>
-                                <a href="#">Explore More <i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="javascript:void(0)">Explore More <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </li>
                     </ul>
@@ -780,7 +780,7 @@
                         <h2>Download Our <br/>Brochure</h2>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-6 text-center text-dm-end">
+                <div class="col-md-6 col-lg-6 text-center text-md-end">
                     <button class="btn-3">Download Now</button>
                 </div>
                 <div class="col-lg-9"></div>
@@ -937,6 +937,15 @@
             480 : { perPage: 1, padding: { left: '30px', right: '30px' } },
         },
     }).mount();
+
+    document.querySelectorAll('#recentProjectSlide .splide__arrow').forEach(arrow => {
+        arrow.addEventListener('click', e => {
+            e.preventDefault();
+            e.stopPropagation();
+        });
+    });
+
+
     new Splide( '#testimonialSlides', {
         type      : 'loop',
         perPage   : 1,
