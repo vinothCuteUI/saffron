@@ -162,6 +162,7 @@ p{
 .anim-reveal.reveal-left { transform: translateX(-100px); }
 .anim-reveal.reveal-right { transform: translateX(100px); }
 .anim-reveal.reveal-up { transform: translateY(100px); }
+.anim-reveal.reveal-down { transform: translateY(-100px); }
 
 .anim-reveal.active {
   opacity: 1;
@@ -571,7 +572,7 @@ input[type=number] {
     text-decoration: none;
     color: var(--text-primary-clr);
     font-size: 1rem;
-    padding: 0.3rem 1rem;
+    padding: 0.3rem 0.8rem;
     font-weight: 500;
     transition: all 0.3s ease;
 }
@@ -1907,13 +1908,10 @@ input[type=number] {
     color: #fff;
 }
 .card-6-content-inner h3{
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     margin-bottom: 0;
     color: #fff;
 }
-
-
-
 .card-6-list-text{
     position: absolute;
     top: 0;
@@ -1923,7 +1921,7 @@ input[type=number] {
     z-index: 1;
     background-color: #fff;
     border-radius: 0px;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 1.5rem;
     transform: rotateY(180deg);
     backface-visibility: hidden;
 }
@@ -1931,8 +1929,6 @@ input[type=number] {
 .card-6:hover .card-6-list-text{
     /* transform: rotateY(0deg); */
 }
-
-
 .card-6-list-inner h5{
     font-size: 2.4rem;
     margin-bottom: 0.8rem;
@@ -1945,7 +1941,7 @@ input[type=number] {
     font-weight: 400;
 }
 .card-6-list-inner h3{
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 .card-6-list-text ul{
@@ -1957,7 +1953,7 @@ input[type=number] {
     position: relative;
     padding: 0 0 0.5rem 1.4rem;
     font-size: 0.8rem;
-
+    
 }
 .card-6-list-text ul li i{
     position: absolute;
@@ -1966,6 +1962,8 @@ input[type=number] {
     font-size: 0.8rem;
     color: var(--primary-clr);
 }
+
+/* Why choose us center styel ------------- */
 .service-center-content{
     display: flex;
     justify-content: center;
@@ -1981,6 +1979,7 @@ input[type=number] {
     width: 350px;
     border-radius: 100%;
 }
+
 .service-center-list{
     flex: 0 0 auto;
     padding: 2rem 3rem;
@@ -1999,6 +1998,7 @@ input[type=number] {
 .service-center-list .service-center-item.service-center-lt-item{
     text-align: right;
 }
+
 .chat-with-us-2{
     text-align: center;
     /* background-image: url(../images/bg-2.jpg);
@@ -2011,24 +2011,37 @@ input[type=number] {
     font-weight: 700;
     margin-bottom: 2rem;
 }
+
+
 /* portfolio-container --------- */
-/* .portfolio-gallery{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-} */
 .portfolio-glightbox{
     display: block;
     width: 100%;
-    /* flex: 0 0 auto; */
-    /* padding-left: 15px;
-    padding-right: 15px; */
     margin-bottom: 1.2rem;
     box-shadow: 0 3px 10px -3px #ccc;
+    text-decoration: none;
 }
 .portfolio-glightbox img{
     width: 100%;
     height: auto;
+}
+
+.gallery-overlap-text{
+    padding: 1rem;
+    background-color: #fff;
+}
+.gallery-overlap-text h4{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary-clr);
+    
+}
+.gallery-overlap-text p{
+    font-size: 1rem;
+}
+.glightbox-clean .gslide-title{
+    font-weight: 700;
+    font-size: 1.4rem;
 }
 /* Faq Accordion ------------ */
 .faq-accordion .accordion-item{
