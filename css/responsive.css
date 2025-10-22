@@ -170,6 +170,25 @@
     .brochure-title p{
         text-align: center;
     }
+    .page-header h2 br{
+        display: none;
+    }
+    .contact-us-info{
+        border-left: 0;
+        border-top: solid 1px #ccc;
+        padding-left: 0;
+        padding-top: 2rem;
+    }
+    .contact-detail-row > div:first-child .contact-us-info{
+        border-top: 0;
+        padding-top: 0;
+    }
+    .contact-lt-img{
+        padding-right: 0;
+    }
+    .contact-form{
+        margin-top: 2rem;
+    }
 }
 
 /* ========== Large Mobile (landscape phones, phablets) ========== */
@@ -300,6 +319,9 @@
     /* .center-img-cirlce{
         width: 100%;
     } */
+    .contact-form{
+        margin-top: 2rem;
+    }
 }
 
 /* ========== Small Laptop ========== */
@@ -371,6 +393,9 @@
     }
     .brochure-title h2{
         font-size: 2.5rem;
+    }
+    .contact-form{
+        margin-top: 2rem;
     }
 }
 
