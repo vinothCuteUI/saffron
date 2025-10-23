@@ -295,7 +295,7 @@
         left: 3rem;
     }
     .abt-lt-content{
-        height: 560px;
+        min-height: 560px;
     }
     .abt-lt-text{
         bottom: 10px;

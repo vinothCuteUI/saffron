@@ -151,7 +151,7 @@ h1, h2, h3, h4, h5, h6{
 
 p{
     color: var(--text-body-clr);
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .anim-reveal {
@@ -277,7 +277,7 @@ input[type=number] {
     top: 0;
     right: 0;
     z-index: 1000;
-    overflow: hidden;
+    /* overflow: hidden; */
     transition: all 0.5s ease;
 }
 .main-header.active-top{
@@ -567,6 +567,16 @@ input[type=number] {
 }
 
 /* Menu style --- */
+.menu-nav{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    position: relative;
+}
+.menu-nav-item{
+    padding: 1rem 0;
+}
 .menu-link{
     position: relative;
     text-decoration: none;
@@ -621,6 +631,45 @@ input[type=number] {
     opacity: 1;
 }
 
+.sub-menu{
+    position: relative;
+}
+.sub-menu .sub-menu-nav{
+    min-width: 200px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px -3px #777;
+    border:solid 1px #eee;
+    padding: 0.5rem;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+.sub-menu:hover .sub-menu-nav{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.sub-menu-link{
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #222;
+    font-size: 1rem;
+    line-height: 1;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+.sub-menu-link:hover{
+    color: var(--primary-clr);
+    /* padding-left: 1.2rem; */
+}
 /* Home page banner -------------- */
 .banner-section{
     position: relative;
@@ -756,7 +805,7 @@ input[type=number] {
 }
 .abt-lt-content{
     position: relative;
-    
+    min-height: 400px;
 }
 .abt-lt-img-shape{
     position: absolute;
@@ -1551,7 +1600,20 @@ input[type=number] {
     align-content: center;
     overflow: hidden;
 }
+.btn-3:hover{
+    background-color: rgb(47, 47, 47) !important;
+    color: #fff !important;
+}
+.btn-3:after{
+    display: none;
+}
 
+.our-brochure-black .brochure-title h2{
+    color: var(--text-primary-clr);   
+}
+.our-brochure-black .brochure-title p{
+    color: var(--text-body-clr);
+}
 /* Footer section ------------------- */
 .footer-section{
     background-color: rgb(47, 47, 47);
@@ -1714,6 +1776,9 @@ input[type=number] {
     position: relative;
     z-index: 1;
     padding: 16rem 0 10rem;
+}
+.page-subbanner-2{
+    padding:8rem 0 6rem;
 }
 .page-subbanner:after{
     content: "";
@@ -2143,4 +2208,43 @@ input[type=number] {
 }
 .map-section{
     height: 500px;
+}
+
+/* Policy style ------------ */
+.policy-section h2{
+    font-size: 2rem;
+    margin-top: 2.4rem;
+    margin-bottom: 1.5rem;
+}
+.policy-section h3{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 2rem 0 1.5rem;
+}
+.policy-section h4{
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 2rem 0 1.5rem;
+}
+.policy-section h5{
+    font-size: 1.2rem;
+}
+.policy-section p{
+    margin-bottom: 1.5rem;
+}
+.policy-section ul {
+    margin: 0;
+    padding: 1.5rem 1.5rem;
+    border-radius: 15px;
+    border: solid 1px #eee;
+    background-color: #fff;
+    margin-bottom: 2rem;
+}
+.policy-section ul li {
+    list-style: none;
+    padding: 0 1rem 1rem 2rem;
+}
+.policy-section ul li:last-child, 
+.policy-section ul li:only-child {
+    padding-bottom: 0;
 }
