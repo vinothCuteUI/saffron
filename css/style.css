@@ -582,7 +582,7 @@ input[type=number] {
     text-decoration: none;
     color: var(--text-primary-clr);
     font-size: 1rem;
-    padding: 0.3rem 0.8rem;
+    padding: 0.3rem 1rem;
     font-weight: 500;
     transition: all 0.3s ease;
 }
@@ -656,6 +656,17 @@ input[type=number] {
     visibility: visible;
     transform: translateY(0);
 }
+.sub-menu .menu-link{
+    position: relative;
+    padding: 0.3rem 1.5rem 0.3rem 1rem;
+}
+.sub-menu .menu-link i{
+    position: absolute;
+    top: 50%;
+    right: 2px;
+    transform: translateY(-50%);
+    font-size: 0.7rem;
+}
 .sub-menu-link{
     display: block;
     padding: 0.5rem 1rem;
@@ -670,6 +681,7 @@ input[type=number] {
     color: var(--primary-clr);
     /* padding-left: 1.2rem; */
 }
+
 /* Home page banner -------------- */
 .banner-section{
     position: relative;
@@ -2079,13 +2091,53 @@ input[type=number] {
 
 
 /* portfolio-container --------- */
+
+
 .portfolio-glightbox{
+    position: relative;
     display: block;
     width: 100%;
     margin-bottom: 1.2rem;
     box-shadow: 0 3px 10px -3px #ccc;
     text-decoration: none;
 }
+
+.portfolio-glightbox::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(1 1 1 / 68%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+.portfolio-glightbox::before{
+    content: "";
+    font-size: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    width: 35px;
+    height: 35px;
+    background-image: url(../images/full-screen.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.5s ease;
+}
+.portfolio-glightbox:hover::after,
+.portfolio-glightbox:hover::before{
+    opacity: 1;
+    visibility: visible;
+}
+
 .portfolio-glightbox img{
     width: 100%;
     height: auto;
