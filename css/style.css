@@ -2091,8 +2091,19 @@ input[type=number] {
 
 
 /* portfolio-container --------- */
-
-
+.portfolio-container .nav-pills .nav-link{
+    background-color: #fff;
+    color: var(--text-primary-clr);
+    border-radius: 25px;
+    border:solid 1px var(--text-primary-clr);
+    margin-right: 0.8rem;
+}
+.portfolio-container .nav-pills .nav-link.active, 
+.portfolio-container .nav-pills .show>.nav-link{
+    background-color: var(--secondary-clr);
+    border-color: var(--secondary-clr);
+    color: #fff;
+}
 .portfolio-glightbox{
     position: relative;
     display: block;
@@ -2300,3 +2311,5 @@ input[type=number] {
 .policy-section ul li:only-child {
     padding-bottom: 0;
 }
+
+
