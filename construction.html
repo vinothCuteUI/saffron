@@ -427,61 +427,75 @@
     
     <!-- Portfolio section start ------------------->
     <section class="page-section">
-        <div class="container">
-            <div class="page-header pb-5">
+        <div class="container-fluid">
+            <div class="page-header pb-5 text-center">
                 <h4>Portfolio</h4>
                 <h2>Our Portfolio</h2>
             </div>
             <div class="row">
                 <!-- Gallery -->
-                <div class="col-md-6 col-xl-4">
+                <div class="col-md-6 col-xl-3">
                     <div class="gallery portfolio-gallery">
-                        <a href="./images/portfolio/portfolio-img-6.jpg" class="portfolio-glightbox" data-glightbox="title: Villa Project – Coimbatore; description: Luxury 3BHK villa with modern architecture, completed in 6 months.">
-                            <img src="./images/portfolio/portfolio-img-6.jpg" alt="portfolio">
-                            <div class="gallery-overlap-text">
+                        <a href="./images/construction/construction/construction-1.jpg" class="portfolio-glightbox construction-gallery" >
+                            <img src="./images/construction/construction/construction-1.jpg" alt="portfolio">
+                            <!-- <div class="gallery-overlap-text">
                                 <h4>Villa Project – Coimbatore</h4>
                                 <p>Luxury 3BHK villa with modern architecture, completed in 6 months.</p>
-                            </div>
+                            </div> -->
                         </a>
-                        <a href="./images/portfolio/portfolio-img-2.jpg" class="portfolio-glightbox" data-glightbox="title: My title; description: this is the slide description">
-                            <img src="./images/portfolio/portfolio-img-2.jpg" alt="portfolio">
+                        <a href="./images/construction/construction/construction-2.jpg" class="portfolio-glightbox construction-gallery" >
+                            <img src="./images/construction/construction/construction-2.jpg" alt="portfolio">
                         </a>
                     </div>
                 </div>
-                <div class="col-md-6 col-xl-4">
+                <div class="col-md-6 col-xl-3">
                     <div class="gallery portfolio-gallery">
-                        <a href="./images/portfolio/portfolio-img-3.jpg" class="portfolio-glightbox" data-glightbox="title: Commercial Complex – Chennai; description: Showroom + Office setup with optimized space planning and premium finishes.">
-                            <img src="./images/portfolio/portfolio-img-3.jpg" alt="portfolio">
-                            <div class="gallery-overlap-text">
+                        <a href="./images/construction/construction/construction-3.jpg" class="portfolio-glightbox construction-gallery" >
+                            <img src="./images/construction/construction/construction-3.jpg" alt="portfolio">
+                            <!-- <div class="gallery-overlap-text">
                                 <h4>Commercial Complex – Chennai</h4>
                                 <p>Showroom + Office setup with optimized space planning and premium finishes.</p>
-                            </div>
+                            </div> -->
                         </a>
-                        <a href="./images/portfolio/portfolio-img-1.jpg" class="portfolio-glightbox" data-glightbox="title: My title; description: this is the slide description">
-                            <img src="./images/portfolio/portfolio-img-1.jpg" alt="portfolio">
+                        <a href="./images/construction/construction/construction-4.jpg" class="portfolio-glightbox construction-gallery" >
+                            <img src="./images/construction/construction/construction-4.jpg" alt="portfolio">
+                        </a>
+                        
+                        <a href="./images/construction/construction/construction-8.jpg" class="portfolio-glightbox construction-gallery" >
+                            <img src="./images/construction/construction/construction-8.jpg" alt="portfolio">
                         </a>
                     </div>
                 </div>
-                <div class="col-md-6 col-xl-4">
+                <div class="col-md-6 col-xl-3">
                     <div class="gallery portfolio-gallery">
-                        <a href="./images/portfolio/portfolio-img-4.jpg" class="portfolio-glightbox" data-glightbox="title: My title; description: this is the slide description">
+                        <a href="./images/construction/construction/construction-6.jpg" class="portfolio-glightbox construction-gallery" >
+                            <img src="./images/construction/construction/construction-6.jpg" alt="portfolio">
+                        </a>
+                        <a href="./images/construction/construction/construction-5.jpg" class="portfolio-glightbox construction-gallery" >
+                            <img src="./images/construction/construction/construction-5.jpg" alt="portfolio">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3">
+                    <div class="gallery portfolio-gallery">
+                        <a href="./images/construction/construction/construction-9.jpg" class="portfolio-glightbox construction-gallery" >
+                            <img src="./images/construction/construction/construction-9.jpg" alt="portfolio">
+                        </a>
+                        <a href="./images/construction/construction/construction-10.jpg" class="portfolio-glightbox construction-gallery " >
+                            <img src="./images/construction/construction/construction-10.jpg" alt="portfolio">
+                        </a>
+                    </div>
+                </div>
+                <!-- <div class="col-md-6 d-xl-none">
+                    <div class="gallery portfolio-gallery">
+                        <a href="./images/portfolio/portfolio-img-4.jpg" class="portfolio-glightbox construction-gallery hide-in-tab d-md-none" >
                             <img src="./images/portfolio/portfolio-img-4.jpg" alt="portfolio">
                         </a>
-                        <a href="./images/portfolio/portfolio-img-5.jpg" class="portfolio-glightbox hide-in-tab d-md-none d-xl-block" data-glightbox="title: My title; description: this is the slide description">
+                        <a href="./images/portfolio/portfolio-img-5.jpg" class="portfolio-glightbox construction-gallery" >
                             <img src="./images/portfolio/portfolio-img-5.jpg" alt="portfolio">
                         </a>
                     </div>
-                </div>
-                <div class="col-md-6 d-xl-none">
-                    <div class="gallery portfolio-gallery">
-                        <a href="./images/portfolio/portfolio-img-4.jpg" class="portfolio-glightbox hide-in-tab d-md-none" data-glightbox="title: My title; description: this is the slide description">
-                            <img src="./images/portfolio/portfolio-img-4.jpg" alt="portfolio">
-                        </a>
-                        <a href="./images/portfolio/portfolio-img-5.jpg" class="portfolio-glightbox" data-glightbox="title: My title; description: this is the slide description">
-                            <img src="./images/portfolio/portfolio-img-5.jpg" alt="portfolio">
-                        </a>
-                    </div>
-                </div>
+                </div> -->
                 
             </div>
         </div>
@@ -845,7 +859,7 @@
 
         const isTabNSmall = window.matchMedia("(min-width:768px) and (max-width: 1024px)").matches;
 
-        const selector = isTabNSmall ? '.portfolio-glightbox:not(.hide-in-tab)' : '.portfolio-glightbox'
+        const selector = isTabNSmall ? '.construction-gallery:not(.hide-in-tab)' : '.construction-gallery'
 
         lightbox = GLightbox({
             selector,
