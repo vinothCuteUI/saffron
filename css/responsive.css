@@ -10,16 +10,33 @@
         transform: translateY(0);
     }
     .banner-section .carousel-inner .carousel-item{
-        height: 120vh;
+        min-height: 80vh;
     }
-    .banner-content h2{
-        font-size: 2.3rem;
+    .banner-content h6{
+        font-size: 1.4rem;
+    }
+    .banner-content h1{
+        font-size: 2rem;
     }
     .banner-content p{
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     .banner-content p br{
         display: none;
+    }
+    .banner-list li{
+        font-size: 1rem;
+    }
+    .banner-get-quote{
+        position: static;
+        transform: translateY(0);
+        width: 90%;
+        margin: 0 auto;
+        padding: 60px 0 0;
+    }
+
+    .banner-form{
+        padding: 2rem 1rem;
     }
     .about-section{
         padding: 100px 0 0px;
@@ -194,14 +211,14 @@
 /* ========== Large Mobile (landscape phones, phablets) ========== */
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     /* Styles for bigger phones */
-    .banner-content h2{
+    .banner-content h1{
         font-size: 3rem;
     }
     .banner-content p{
         font-size: 1.2rem;
     }
     .banner-section .carousel-inner .carousel-item{
-        height: 70vh;
+        min-height: 70vh;
     }
 }
 
@@ -212,10 +229,21 @@
         transform: translateY(-4px);
     }
     .banner-section .carousel-inner .carousel-item{
-        height: 110vh;
+        min-height: 80vh;
     }
-    .banner-content h2{
+    .banner-content h1{
         font-size: 3rem;
+    }
+    .banner-get-quote{
+        position: static;
+        transform: translateY(0);
+        width: 90%;
+        margin: 0 auto;
+        padding: 60px 0 0;
+    }
+
+    .banner-form{
+        padding: 2rem 1rem;
     }
     .abt-img-1{
         height: 400px;
@@ -326,6 +354,17 @@
 
 /* ========== Small Laptop ========== */
 @media only screen and (min-width: 992px) and (max-width: 1280px) {
+    .banner-get-quote{
+        position: static;
+        transform: translateY(0);
+        width: 90%;
+        margin: 0 auto;
+        padding: 60px 0 0;
+    }
+
+    .banner-form{
+        padding: 2rem 1rem;
+    }
     .main-header.active-top{
         transform: translateY(-1px);
     }
@@ -406,6 +445,17 @@
         font-size: 0.9rem;
         padding: 0.3rem 0.8rem;
     }
+    .banner-get-quote{
+        right: 4%;
+        width: 420px;
+   }
+}
+
+@media only screen and (min-width: 1300px) and (max-width: 1445px) {
+   .banner-get-quote{
+        right: 4%;
+        width: 450px;
+   }
 }
 
 /* ========== Large Screen / TV ========== */

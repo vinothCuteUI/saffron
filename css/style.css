@@ -687,11 +687,23 @@ input[type=number] {
     position: relative;
 }
 .banner-section .carousel-inner .carousel-item{
-    height: 100vh;
+    min-height: 100vh;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    align-items: center;
 }
+
+.banner-slide-1{
+    background-image: linear-gradient(89.8deg, #010101 0.15%, rgba(1, 1, 1, 0.3) 99.81%), url(../images/banner/banner-1.jpg);
+}
+.banner-slide-2{
+    background-image: linear-gradient(89.8deg, #010101 0.15%, rgba(1, 1, 1, 0.3) 99.81%), url(../images/banner/banner-2.jpg);
+}
+/* .banner-slide-1{
+    background-image: linear-gradient(89.8deg, #010101 0.15%, rgba(1, 1, 1, 0.3) 99.81%), url(../images/banner/banner-1.jpg);
+} */
 .banner-container{
     display: flex;
     align-items: center;
@@ -700,11 +712,43 @@ input[type=number] {
     top: 0;
     bottom: 0;
     right: 0;
-    background-image: linear-gradient(89.8deg, #010101 0.15%, rgba(1, 1, 1, 0.3) 99.81%);
+    /* background-image: linear-gradient(89.8deg, #010101 0.15%, rgba(1, 1, 1, 0.3) 99.81%); */
     z-index: 2;
 }
 .banner-content{
     position: relative;
+    padding: 4rem 0;
+}
+.banner-list {
+    margin: 0 0 2rem;
+    padding: 0;
+}
+.banner-list li{
+    color: #eee;
+    list-style: none;
+    list-style-position: inside;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.2rem;
+}
+.banner-list li:after{
+    content: "";
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--primary-clr);
+}
+.banner-get-quote{
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    width: 500px;
+    transform: translateY(-50%);
+    z-index: 2;
 }
 /* .banner-content:after{
     content: "";
@@ -723,9 +767,9 @@ input[type=number] {
     font-weight: 400;
     margin-bottom: 1rem;
 }
-.banner-content h2{
+.banner-content h1{
     color: #fff;
-    font-size: 5rem;
+    font-size: 3.5rem;
     font-weight: 800;
     letter-spacing: 1px;
    
@@ -904,7 +948,7 @@ input[type=number] {
 }
 
 .abt-img-1{
-    background-image: url(../images/about-img-1.jpg);
+    background-image: url(../images/interior/home_interiors/interior-v-10.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -918,7 +962,7 @@ input[type=number] {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) , rgba(0, 0, 0, 0.5)), url(../images/about-img-2.webp);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) , rgba(0, 0, 0, 0.5)), url(../images/interior/office_interiors/office-h-23.jpeg);
     padding: 1.8rem 2rem;
     text-align: center;
 }
@@ -935,7 +979,7 @@ input[type=number] {
     font-weight: 600;
 }
 .abt-img-3{
-    background-image: url(../images/about-img-3.webp);
+    background-image: url(../images/interior/home_interiors/interior-v-9.jpg);
     background-position: center;
     background-repeat: repeat;
     background-size: cover;
@@ -1297,7 +1341,7 @@ input[type=number] {
 }
 .choose-rt-img-1{
     height: 100%;
-    background-image: url(../images/recent-project-1.jpg);
+    background-image: url(../images/interior/office_interiors/office-v-8.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1305,7 +1349,7 @@ input[type=number] {
 }
 .choose-rt-img-2{
     height: 47%;
-    background-image: url(../images/choose-us-1.jpg);
+    background-image: url(../images/interior/home_interiors/interior-v-16.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1314,7 +1358,7 @@ input[type=number] {
 }
 .choose-rt-img-3{
     height: 47%;
-    background-image: url(../images/choose-us-2.jpg);
+    background-image: url(../images/interior/home_interiors/interior-h-8.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1789,6 +1833,7 @@ input[type=number] {
     z-index: 1;
     padding: 16rem 0 10rem;
 }
+
 .page-subbanner-2{
     padding:8rem 0 6rem;
 }
