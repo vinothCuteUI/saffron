@@ -172,7 +172,7 @@ p{
 /* Button --------------------------------- */
 .btn{
     position: relative;
-    border-radius: 0;
+    border-radius: 10px;
     transition: all 0.5s ease;
     z-index: 1;
 }
@@ -188,6 +188,7 @@ p{
     background-color: var(--secondary-clr);
     z-index: -1;
     transition: all 0.3s ease;
+    border-radius: 10px;
 }
 .btn:hover:after{
     width: 100%;
@@ -283,6 +284,9 @@ input[type=number] {
 .main-header.active-top{
     transform: translateY(-45px);
     box-shadow: 0 3px 10px -3px #ccc;
+}
+.landing-header.active-top{
+    transform: translateY(0px) !important;
 }
 .top-header-info{
     background-color: var(--top-header-bg);
@@ -802,6 +806,10 @@ input[type=number] {
     font-weight: 700;
     margin-bottom: 1.5rem;
     letter-spacing: 1px;
+}
+.page-header p{
+    font-size: 1.3rem;
+    color: #333;
 }
 .page-header-2{
     padding-bottom: 1.5rem;
@@ -1646,7 +1654,7 @@ input[type=number] {
     color: #fff;
 }
 .btn-3{
-    width: 300px;
+    min-width: 300px;
     height: 60px;
     background-color: #080A0B;
     color: #fff;
@@ -2358,3 +2366,171 @@ input[type=number] {
 }
 
 
+/* Landing page style -------------------- */
+.landing-banner-section{
+    background-image: linear-gradient(89.8deg, rgb(255 255 255) 0.15%, rgb(255 255 255 / 0%) 99.81%), url(../images/img-bg-1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.landing-banner-content{
+}
+.landing-banner-content h1{
+    color: #000;
+    font-size: 3.4rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+.landing-banner-content p{
+    color: #000;
+    font-size: 1.2rem;
+}
+.reassurance-line{
+    font-size: 1rem;
+    font-style: italic;
+    margin-top: 1.5rem;
+}
+.landing-banner-section .banner-get-quote{
+    position: static;
+    transform: translateY(0px);
+    width: 100%;
+
+}
+.landing-banner-section .banner-form{
+    background-color: #fff;
+    
+}
+
+.landing-nmbr-content{
+    background-color: #fff;
+    padding: 2.5rem 2rem;
+    display: flex;
+    justify-content: center;
+    box-shadow: 3px 0 10px -3px #ccc;
+    transform: translateY(-65px);
+    border-radius: 10px;
+}
+.number-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+    flex: 0 0 auto;
+    border-left: solid 1px #e4e4e4;
+}
+.number-item:first-child{
+    border-left: 0;
+}
+.number-item img{
+    width: 45px;
+    height: auto;
+}
+
+.number-item span{
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #333;
+}
+/* card-7 ------------- */
+.card-7{
+    background-color: #fff;
+    border-radius: 0px;
+    /* box-shadow: 3px 0px 10px -3px #ccc; */
+    /* border:solid 1px #ccc; */
+    padding: 0rem ;
+    /* padding-left: 90px; */
+    position: relative;
+    display: flex;
+}
+.card-7-content{
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+    width: 100%;
+}
+.card-7-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    background-color: var(--secondary-clr);
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    flex: 0 0 auto;
+}
+.card-7-icon img{
+    width: 40px;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-7-content h3{
+    font-size: 1.3rem;
+   
+}
+.card-7-content p{
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+.choose-us-list{
+    padding-right: 0;
+    padding-left: 0;
+}
+.choose-us-list .card-7{
+    height: 150px;
+    border-right:solid 1px #e4e4e4;
+    border-bottom: solid 1px #e4e4e4;
+}
+
+.choose-us-list:nth-child(3) .card-7,
+.choose-us-list:nth-child(6) .card-7{
+    border-right: 0;
+}
+.choose-us-list:nth-child(4) .card-7,
+.choose-us-list:nth-child(5) .card-7,
+.choose-us-list:nth-child(6) .card-7{
+    border-bottom: 0;
+}
+
+.landing-services{
+    position: relative;
+    background-image: url(../images/img-2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 1;
+}
+.landing-services:after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 65%;
+    background-color: rgb(255 255 255 / 82%);
+    z-index: -1;
+}
+.landing-services-item img{
+    width: 45px;
+    height: auto;
+}
+.landing-services-item h3{
+    font-size: 1.3rem;
+    margin: 1rem 0 0.8rem; 
+}
+.landing-services-item p{
+    color: #333;
+}
