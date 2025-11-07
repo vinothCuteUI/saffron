@@ -44,8 +44,16 @@
     .page-section{
         padding-bottom: 60px;
     }
+
+    .page-header h4{
+        font-size: 1rem;
+    }
     .page-header h2{
-        font-size: 2rem;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .page-header p{
+        font-size: 1rem;
     }
     .page-header-2 h2{
         font-size: 2rem;
@@ -182,7 +190,7 @@
         width: 100%;
     }
     .faq-accordion .accordion-button{
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
     .brochure-title p{
         text-align: center;
@@ -206,6 +214,89 @@
     .contact-form{
         margin-top: 2rem;
     }
+
+    .landing-banner-section{
+        height: auto;
+        padding: 80px 0;
+    }
+    
+    .landing-banner-content h1{
+        font-size: 2rem;
+    }
+    .landing-banner-content p{
+        font-size: 1rem;
+    }
+    .landing-numbers{
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .landing-nmbr-content{
+        transform: translateY(0);
+        flex-wrap: wrap;
+        padding: 1.5rem 1rem;
+    }
+    .landing-nmbr-content .number-item{
+        width: 50%;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    .landing-nmbr-content .number-item:nth-child(1),
+    .landing-nmbr-content .number-item:nth-child(2){
+        border-bottom: solid 1px #e4e4e4;
+        padding-top: 0rem;
+    }
+    .landing-nmbr-content .number-item:nth-child(1),
+    .landing-nmbr-content .number-item:nth-child(2){
+        border-bottom: solid 1px #e4e4e4;
+    }
+    .landing-nmbr-content .number-item:nth-child(3){
+        border-left: 0;
+    }
+    .number-item span{
+        font-size: 1rem;
+    }
+    .number-item span br{
+        display: none;
+    }
+    .card-7-content h3{
+        font-size: 1.2rem;
+    }
+    .choose-us-list .card-7{
+        border-right: 0;
+    }
+    .choose-us-list:nth-child(4) .card-7, 
+    .choose-us-list:nth-child(5) .card-7, 
+    .choose-us-list:nth-child(6) .card-7{
+        border-bottom: solid 1px #e4e4e4;
+    }
+    .choose-us-list:last-child .card-7{
+        border-bottom: 0;
+    }   
+    .landing-services:after{
+        width: 100%;
+    }
+    .sub-banner-content h2{
+        font-size: 2rem;
+
+    }
+    .sub-banner-content p{
+        font-size: 1rem;
+    }
+    .sub-banner-content p > br{
+        display: none;
+    }
+    .form-row .form-group{
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    .form-row .form-submit{
+        width: 100%;
+    }
+    .faq-img{
+        text-align: center;
+        margin-top: 2rem;
+    }
+
 }
 
 /* ========== Large Mobile (landscape phones, phablets) ========== */
@@ -271,9 +362,11 @@
     .choose-rt-img-3{
         height: 200px;
     }
+    
     .page-header h2{
         font-size: 2rem;
     }
+
     .page-header-2 h2{
         font-size: 2rem;
     }
@@ -349,6 +442,82 @@
     } */
     .contact-form{
         margin-top: 2rem;
+    }
+    .landing-banner-section{
+        height: auto;
+        padding: 80px 0;
+    }
+    .landing-numbers{
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .landing-nmbr-content{
+        transform: translateY(0);
+        flex-wrap: wrap;
+        padding: 1.5rem 1rem;
+    }
+    .landing-nmbr-content .number-item{
+        width: 50%;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        justify-content: start;
+    }
+    .landing-nmbr-content .number-item:nth-child(1),
+    .landing-nmbr-content .number-item:nth-child(2){
+        border-bottom: solid 1px #e4e4e4;
+        padding-top: 0rem;
+    }
+    .landing-nmbr-content .number-item:nth-child(1),
+    .landing-nmbr-content .number-item:nth-child(2){
+        border-bottom: solid 1px #e4e4e4;
+    }
+    .landing-nmbr-content .number-item:nth-child(3){
+        border-left: 0;
+    }
+    .number-item span{
+        font-size: 1rem;
+    }
+    .number-item span br{
+        display: none;
+    }
+    .choose-us-list:nth-child(even) .card-7{
+        border-right: 0;
+        border-left: 0;
+        border-bottom: solid 1px #e4e4e4;
+    }
+    .choose-us-list:nth-child(odd) .card-7{
+        border-right: solid 1px #e4e4e4;
+    }
+    .choose-us-list:last-child .card-7{
+        border-bottom: 0;
+    }
+    .landing-services:after{
+        width: 100%;
+    }
+    .page-header p br{
+        display: none;
+    }
+    .testimonial-slides-2 .splide__arrow--next{
+        right: -2rem;
+    }
+    .testimonial-slides-2 .splide__arrow--prev{
+        left: -2rem;
+    }
+    .sub-banner-content h2{
+        font-size: 2.2rem;
+    }
+    .form-row .form-group{
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    .form-row .form-submit{
+        width: 100%;
+    }
+    .faq-img{
+        margin-top: 2rem;
+    }
+    .faq-accordion .accordion-button{
+        font-size: 1.5rem;
     }
 }
 
@@ -435,6 +604,31 @@
     }
     .contact-form{
         margin-top: 2rem;
+    }
+    .landing-banner-section{
+        height: auto;
+        padding: 80px 0;
+    }
+    .choose-us-list:nth-child(even) .card-7{
+        border-right: 0;
+        border-left: 0;
+        border-bottom: solid 1px #e4e4e4;
+    }
+    .choose-us-list:nth-child(odd) .card-7{
+        border-right: solid 1px #e4e4e4;
+    }
+    .choose-us-list:last-child .card-7{
+        border-bottom: 0;
+    }
+    .landing-services:after{
+        width: 70%;
+    }
+    .form-row .form-group{
+        width: 50%;
+        margin-bottom: 1.5rem;
+    }
+    .form-row .form-submit{
+        width: 100%;
     }
 }
 
