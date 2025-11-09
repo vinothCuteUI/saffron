@@ -4,7 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./images/favicon.png" />
-    <title>Saffron</title>
+    <title>Saffron Interiors | Home Interiors & Construction Company in Tamil Nadu</title>
+    <meta name="description" content="Saffron Interiors offers home interiors and construction services across Tamil Nadu. Interiors from ₹3.5 Lakhs with 30-day delivery and 10-year warranty.">
+    <meta name="keywords" content="Saffron Interiors, Interior Designers Tamil Nadu, Construction Company Coimbatore, 2BHK Interiors, Modular Kitchen, Home Design, Interior Design Company">
+
+    <link rel="canonical" href="https://www.saffroninteriors.in/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Saffron Interiors | Interiors & Construction Experts in Tamil Nadu" />
+    <meta property="og:description" content="From modular kitchens to full home construction — Saffron Interiors delivers quality interiors with 30-day delivery & 10-year warranty." />
+    <meta property="og:url" content="https://www.saffroninteriors.in/" />
+    <meta property="og:site_name" content="Saffron Interiors" />
+    <meta property="og:image" content="https://www.saffroninteriors.in/assets/images/saffron-interiors-cover.jpg" />
+    <meta property="og:locale" content="en_IN" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Saffron Interiors | Interiors & Construction Experts" />
+    <meta name="twitter:description" content="Design + Build under one roof. Interiors from ₹3.5 Lakhs with 10-year warranty & 30-day delivery." />
+    <meta name="twitter:image" content="https://www.saffroninteriors.in/assets/images/saffron-interiors-cover.jpg" />
+
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="./css/splide.min.css">
@@ -24,23 +42,22 @@
                                 <i class="fa-solid fa-envelope"></i>
                                 enquiry@saffroninteriors.in
                             </a>
+
                             <a href="tel:9003299830" class="info-link">
                                 <i class="fa-solid fa-phone-volume"></i>
                                 +91 90032 99830
                             </a>
+                            <a href="tel:9962272611" class="info-link">+91 99622 72611</a>
                             
                         </div>
                     </div>
 
                     <div class="col-4 col-lg-6 ">
                         <div class="top-social-info ">
-                            <a href="#" class="social-link">
+                            <a href="https://www.facebook.com/saffraninteriorsandengineerings/" target="_blank" class="social-link">
                                 <i class="fa-brands fa-facebook-f"></i>
                             </a>
-                            <a href="#" class="social-link">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                            <a href="#" class="social-link insta">
+                            <a href="https://www.instagram.com/saffroninteriorsindia/" target="_blank" class="social-link insta">
                                 <i class="fa-brands fa-instagram"></i>
                             </a>
                         </div>
@@ -133,15 +150,17 @@
                     <i class="fa-solid fa-phone-volume"></i>
                     +91 90032 99830
                 </a>
+                <a href="tel:9962272611" class="info-link">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    +91 99622 72611
+                </a>
             </div>
             <div class="mobile-social-links">
-                <a href="#" class="social-link">
+                <a href="https://www.facebook.com/saffraninteriorsandengineerings/" target="_blank" class="social-link">
                     <i class="fa-brands fa-facebook-f"></i>
                 </a>
-                <a href="#" class="social-link">
-                    <i class="fa-brands fa-twitter"></i>
-                </a>
-                <a href="#" class="social-link insta">
+              
+                <a href="https://www.instagram.com/saffroninteriorsindia/" target="_blank" class="social-link insta">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
             </div>
@@ -204,19 +223,23 @@
         </div>
         <!--  -->
         <div class="banner-get-quote ">
-            <form class="banner-form" >
+            <form class="banner-form" id="homeGetQuoteForm">
+                <div class="loader-container d-none">
+                    <span class="loader"></span>
+                </div>
                 <div class="form-title text-center mb-4">
                     <h3>Get Your Quote</h3>
+                    <div class="alert d-none" role="alert" id="homeGetQuoteErr"></div>
                 </div>
                 <div class="form-group mb-4">
-                    <input type="text" class="form-control" id="userName" placeholder="Your name">
+                    <input type="text" class="form-control " id="userName" placeholder="Your name">
                 </div>
                 <div class="form-group mb-4">
-                    <input type="number" class="form-control" id="phone" placeholder="Mobile number">
+                    <input type="number" class="form-control" id="mobile"  placeholder="Mobile number">
                 </div>
                 <div class="form-group mb-4">
-                    <select class="form-select" aria-label="Default select example">
-                        <option value="null">Service Type</option>
+                    <select class="form-select" id="serviceType" aria-label="Default select example">
+                        <!-- <option value="">-- Service Type --</option> -->
                         <option value="civil">Civil</option>
                         <option value="Interiors">Interiors</option>
                     </select>
@@ -267,7 +290,7 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="abt-card mb-4 mb-lg-0">
-                                        <h4>Across the Globe</h4>
+                                        <h4>Interiors Delivered</h4>
                                         <img src="./images/sofa-icon.png" alt="Globe" />
                                         <div class="abt-card-text">
                                             <span><span class="anim-number">150</span> +</span>
@@ -277,7 +300,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="abt-card">
-                                        <h4>Regional Insight</h4>
+                                        <h4>Homes Delivered</h4>
                                         <img src="./images/construction-icon.png" alt="Regional" />
                                         <div class="abt-card-text">
                                             <span><span class="anim-number">100</span> +</span>
@@ -308,7 +331,7 @@
                 <div class="col-xl-7">
                     <div class="page-header-2 d-flex justify-content-between align-items-end flex-wrap flex-lg-nowrap">
                         <p class="px-0 px-xl-5 w-100 w-lg-auto">We provide complete interior and construction solutions — from design and planning to execution — delivering elegant, functional spaces across Chennai and Tamil Nadu.</p>
-                        <button class="btn-2" style="flex: 0 0 auto;">View All <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span></button>
+                        <!-- <button class="btn-2" style="flex: 0 0 auto;">View All <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span></button> -->
                     </div>
                 </div>
             </div>
@@ -399,7 +422,7 @@
                             <h5>Success Projects</h5>
                             <div class="achiev-line"></div>
                             <div class="achievement-number">
-                                <span class="achievement-count anim-number">600</span>+
+                                <span class="achievement-count anim-number">100</span>+
                             </div>
                         </div>
                     </div>
@@ -423,7 +446,7 @@
                             <h5>Clients Satisfactions</h5>
                             <div class="achiev-line"></div>
                             <div class="achievement-number">
-                                <span class="achievement-count anim-number">500</span>+
+                                <span class="achievement-count anim-number">100</span>+
                             </div>
                         </div>
                     </div>
@@ -508,54 +531,70 @@
             <div class="splide recent-project-slide" id="recentProjectSlide">
                 <div class="splide__track">
                     <ul class="splide__list">
-                        <li class="splide__slide">
-                            <img src="./images/recent-project-1.jpg" alt="Residential projects">
+                        <li class="splide__slide" style="background-image: url(./images/interior/home_interiors/interior-v-20.jpg);">
                             <div class="content-slide">
-                                <h4>Residential projects</h4>
-                                <a href="javascript:void(0)">Explore More <i class="fa-solid fa-arrow-right"></i></a>
+                                <h4>Home interiors</h4>
+                                <a href="interiors.html">Explore More <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </li>
-                        <li class="splide__slide">
-                            <img src="./images/recent-project-2.jpg" alt="Eco-friendly design">
+                        <li class="splide__slide" style="background-image: url(./images/interior/office_interiors/office-h-5.jpg);">
                             <div class="content-slide">
-                                <h4>Eco-friendly design</h4>
-                                <a href="javascript:void(0)">Explore More <i class="fa-solid fa-arrow-right"></i></a>
+                                <h4>Office interiors</h4>
+                                <a href="interiors.html">Explore More <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </li>
-                        <li class="splide__slide">
-                            <img src="./images/recent-project-3.jpg" alt="Family Apartment" />
+                        <li class="splide__slide" style="background-image: url(./images/interior/home_interiors/interior-h-8.jpg);">
                             <div class="content-slide">
-                                <h4>Family Apartment</h4>
-                                <a href="javascript:void(0)">Explore More <i class="fa-solid fa-arrow-right"></i></a>
+                                <h4>Home interiors</h4>
+                                <a href="interiors.html">Explore More <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </li>
-                        <li class="splide__slide">
-                            <img src="./images/recent-project-1.jpg" alt="Custom furniture" />
+                        <li class="splide__slide" style="background-image: url(./images/interior/office_interiors/office-h-21.jpg);">
                             <div class="content-slide">
                                 <h4>Custom furniture</h4>
-                                <a href="javascript:void(0)">Explore More <i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="interiors.html">Explore More <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </li>
-                        <li class="splide__slide">
-                            <img src="./images/recent-project-2.jpg" alt="Residential projects" />
+                        <li class="splide__slide" style="background-image: url(./images/interior/home_interiors/interior-v-10.jpg);">
                             <div class="content-slide">
-                                <h4>Residential projects</h4>
-                                <a href="javascript:void(0)">Explore More <i class="fa-solid fa-arrow-right"></i></a>
+                                <h4>Home interiors</h4>
+                                <a href="interiors.html">Explore More <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </li>
-                        <li class="splide__slide">
-                            <img src="./images/recent-project-3.jpg" alt="Family Apartment" />
+                        <li class="splide__slide" style="background-image: url(./images/interior/office_interiors/office-h-13.jpg);">
                             <div class="content-slide">
-
-                                <h4>Family Apartment</h4>
-                                <a href="javascript:void(0)">Explore More <i class="fa-solid fa-arrow-right"></i></a>
+                                <h4>Office interiors</h4>
+                                <a href="interiors.html">Explore More <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </li>
-                        <li class="splide__slide">
-                            <img src="./images/recent-project-1.jpg" alt="" />
+                        <li class="splide__slide" style="background-image: url(./images/interior/home_interiors/interior-h-11.jpg);">
                             <div class="content-slide">
-                                <h4>Residential projects</h4>
-                                <a href="javascript:void(0)">Explore More <i class="fa-solid fa-arrow-right"></i></a>
+                                <h4>Home interiors</h4>
+                                <a href="interiors.html">Explore More <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </li>
+                        <li class="splide__slide" style="background-image: url(./images/interior/office_interiors/office-h-8.jpg);">
+                            <div class="content-slide">
+                                <h4>Office interiors</h4>
+                                <a href="interiors.html">Explore More <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </li>
+                        <li class="splide__slide" style="background-image: url(./images/interior/home_interiors/interior-v-8.jpg);">
+                            <div class="content-slide">
+                                <h4>Home interiors</h4>
+                                <a href="interiors.html">Explore More <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </li>
+                        <li class="splide__slide" style="background-image: url(./images/interior/office_interiors/office-h-9.jpg);">
+                            <div class="content-slide">
+                                <h4>Office interiors</h4>
+                                <a href="interiors.html">Explore More <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </li>
+                        <li class="splide__slide" style="background-image: url(./images/interior/home_interiors/interior-v-13.jpg);">
+                            <div class="content-slide">
+                                <h4>Home interiors</h4>
+                                <a href="interiors.html">Explore More <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </li>
                     </ul>
@@ -634,7 +673,7 @@
                 <div class="col-lg-6">
                     <div class="page-header page-hr-white pb-5">
                         <h4>Testimonial</h4>
-                        <h2>What They’re Talking About Comapany ?</h2>
+                        <h2>What They’re Talking About Company?</h2>
                     </div>
                 </div>
             </div>
@@ -648,15 +687,15 @@
                                 <ul class="splide__list">
                                     <li class="splide__slide">
                                         <div class="testimonial-content">
-                                            <p>Very high quality ! However, that would be even greater if you can seperate css &amp; js for each type of theme. Best design, well coded, really surprised to check it’s reusability. Clean code. Easy to use. Most of category included and author will add.</p>
+                                            <p>Saffron Interiors did an excellent job from start to finish! Great designs, quality work at a fair price, and timely completion. Truly professional and elegant interiors.</p>
                                             <div class="testimonial-info d-flex justify-content-between align-items-center">
                                                 <div class="testimonial-user">
                                                     <div class="testimonial-picture">
-                                                        <img src="./images/testimonial/author.png" alt="testimonial user" />
+                                                        <img src="./images/testimonial/testimonial-woman.png" alt="testimonial user" />
                                                     </div>
                                                     <div class="user-name">
-                                                        <h4>Rasalina William</h4>
-                                                        <span>Carlton Trapp </span>
+                                                        <h4>Aashlin Beena JS</h4>
+                                                        <span>Chennai</span>
                                                     </div>
                                                 </div>
                                                 <div class="testimonial-quites">
@@ -667,15 +706,15 @@
                                     </li>
                                     <li class="splide__slide">
                                         <div class="testimonial-content">
-                                            <p>Very high quality ! However, that would be even greater if you can seperate css &amp; js for each type of theme. Best design, well coded, really surprised to check it’s reusability. Clean code. Easy to use. Most of category included and author will add.</p>
+                                            <p>From consultation to completion, the team was creative, detail-oriented, and highly professional. They perfectly brought our vision to life—our home now feels both luxurious and comfortable!</p>
                                             <div class="testimonial-info d-flex justify-content-between align-items-center">
                                                 <div class="testimonial-user">
                                                     <div class="testimonial-picture">
-                                                        <img src="./images/testimonial/author.png" alt="testimonial user" />
+                                                        <img src="./images/testimonial/testimonial-woman.png" alt="testimonial user" />
                                                     </div>
                                                     <div class="user-name">
-                                                        <h4>Rasalina William</h4>
-                                                        <span>Carlton Trapp </span>
+                                                        <h4>Janu Bala</h4>
+                                                        <span>Chennai </span>
                                                     </div>
                                                 </div>
                                                 <div class="testimonial-quites">
@@ -686,15 +725,53 @@
                                     </li>
                                     <li class="splide__slide">
                                         <div class="testimonial-content">
-                                            <p>Very high quality ! However, that would be even greater if you can seperate css &amp; js for each type of theme. Best design, well coded, really surprised to check it’s reusability. Clean code. Easy to use. Most of category included and author will add.</p>
+                                            <p>Saffron Interiors transformed our home beyond expectations! Elegant designs, flawless execution, and great attention to detail. Feels like living in a dream home!</p>
                                             <div class="testimonial-info d-flex justify-content-between align-items-center">
                                                 <div class="testimonial-user">
                                                     <div class="testimonial-picture">
-                                                        <img src="./images/testimonial/author.png" alt="testimonial user" />
+                                                        <img src="./images/testimonial/testimonial-man.png" alt="testimonial user" />
                                                     </div>
                                                     <div class="user-name">
-                                                        <h4>Rasalina William</h4>
-                                                        <span>Carlton Trapp </span>
+                                                        <h4>Kumar</h4>
+                                                        <span>Chennai </span>
+                                                    </div>
+                                                </div>
+                                                <div class="testimonial-quites">
+                                                    <img src="./images/quites.png" alt="testimonial quites" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="testimonial-content">
+                                            <p>We only needed guidance, not full construction. Saffron helped us control costs and avoid mistakes.</p>
+                                            <div class="testimonial-info d-flex justify-content-between align-items-center">
+                                                <div class="testimonial-user">
+                                                    <div class="testimonial-picture">
+                                                        <img src="./images/testimonial/testimonial-man.png" alt="testimonial user" />
+                                                    </div>
+                                                    <div class="user-name">
+                                                        <h4>Karthik</h4>
+                                                        <span>Chennai</span>
+                                                    </div>
+                                                </div>
+                                                <div class="testimonial-quites">
+                                                    <img src="./images/quites.png" alt="testimonial quites" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <div class="testimonial-content">
+                                            <p>Their BOQ and supervision saved us nearly 10% of our project cost. Very reliable.</p>
+                                            <div class="testimonial-info d-flex justify-content-between align-items-center">
+                                                <div class="testimonial-user">
+                                                    <div class="testimonial-picture">
+                                                        <img src="./images/testimonial/testimonial-woman.png" alt="testimonial user" />
+                                                    </div>
+                                                    <div class="user-name">
+                                                        <h4>Lakshmi</h4>
+                                                        <span>Salem</span>
                                                     </div>
                                                 </div>
                                                 <div class="testimonial-quites">
@@ -951,10 +1028,9 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="ftr-social-links my-4 my-lg-0">
-                        <a href="#" class="ftr-sl-link"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="ftr-sl-link"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="#" class="ftr-sl-link"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="ftr-sl-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/saffraninteriorsandengineerings/" target="_blank" class="ftr-sl-link"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/saffroninteriorsindia/" target="_blank" class="ftr-sl-link"><i class="fa-brands fa-instagram"></i></a>
+                        
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -1034,11 +1110,94 @@
         },
     }).mount();
  
-    // const od = document.getElementById('achiev-num-1');
-    // document.getElementById('od2btn').addEventListener('click', () => {
-    //     od.innerText = 15; 
-    // });
-    // options via window.odometerOptions = { format: '(,ddd)', duration: 2000 };
+    
+    //Form submition
+    formQuoteSubmition("homeGetQuoteForm", "https://script.google.com/macros/s/AKfycbzhnEovL7gEO3xjhZmICSVYn4ntQiSKwDYwDW5kqLoMt5q4xD5t84i8qnLQH0uTQyDGUQ/exec", ["userName", "mobile", "serviceType", "city"])
+
+    
+
+
 </script>
+
+<!-- JSON-LD: LocalBusiness + Website + Service for Saffron Interiors -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.saffroninteriors.in/#localbusiness",
+      "name": "Saffron Interiors",
+      "image": "https://www.saffroninteriors.in/assets/images/saffron-interiors-cover.jpg",
+      "url": "https://www.saffroninteriors.in/",
+      "telephone": [
+        "+91-99622-72611",
+        "+91-90032-99830"
+      ],
+      "email": "enquiry@saffroninteriors.in",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "D2, 1st Floor, Safa Square Complex, Near Aravind Eye Hospital, Poonamallee High Road, Kumananchavadi",
+        "addressLocality": "Chennai",
+        "addressRegion": "Tamil Nadu",
+        "postalCode": "600056",
+        "addressCountry": "IN"
+      },
+      "priceRange": "₹₹",
+      "description": "Saffron Interiors — interior design and construction company offering home interiors, modular kitchens and construction services. 2BHK interiors from ₹3.5 Lakhs, 30-day delivery option and 10-year warranty (where applicable).",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Tamil Nadu"
+      },
+      "serviceType": [
+        "Home Interior Design",
+        "Modular Kitchen Design",
+        "Living Room Interior",
+        "2BHK Interiors",
+        "Construction Services"
+      ],
+      "sameAs": [
+        "https://www.instagram.com/saffroninteriorsindia/",
+        "https://www.facebook.com/saffraninteriorsandengineerings/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.saffroninteriors.in/#website",
+      "url": "https://www.saffroninteriors.in/",
+      "name": "Saffron Interiors",
+      "publisher": {
+        "@id": "https://www.saffroninteriors.in/#localbusiness"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.saffroninteriors.in/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.saffroninteriors.in/#service-interiors",
+      "name": "Home Interior Design",
+      "description": "End-to-end interior design and execution including modular kitchens, wardrobes, living/dining solutions and turnkey 2BHK packages.",
+      "provider": {
+        "@id": "https://www.saffroninteriors.in/#localbusiness"
+      },
+      "serviceType": "Interior Design"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.saffroninteriors.in/#service-construction",
+      "name": "Construction Services",
+      "description": "Civil construction and project management services for residential and commercial builds.",
+      "provider": {
+        "@id": "https://www.saffroninteriors.in/#localbusiness"
+      },
+      "serviceType": "Construction"
+    }
+  ]
+}
+</script>
+
 </body>
 </html>

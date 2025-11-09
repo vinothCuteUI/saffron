@@ -157,6 +157,44 @@ p{
 .bg-light-gray{
     background-color: #f5f5f5;
 }
+
+
+
+.loader-container{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255 255 255 / 78%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.loader {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 4px solid var(--primary-clr);
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+} 
+
+
+
 .anim-reveal {
   opacity: 0;
   transition: all 1s ease;
@@ -500,12 +538,33 @@ input[type=number] {
     padding: 2rem;
     border-radius: 10px;
     border: solid 1px #ccc;
+    position: relative;
+    overflow: hidden;
+}
+.form-title{
+    position: relative;
+}
+.form-title .alert{
+    font-size: 0.8rem;
+    margin: 0 auto;
+    padding: 0.2rem 1rem;
+    display: inline-block;
 }
 .form-group .form-control, 
 .form-group .form-select{
     height: 55px;
     border-radius: 10px;
 }
+.form-control.invalid, 
+.form-select.invalid{
+    border-color: red !important;
+    /* color: red !important; */
+    /* background-color: #f8d7da; */
+    /* border-color: #f5c6cb; */
+}
+/* .form-control.invalid::placeholder{
+    color: red !important;
+} */
 .form-group .form-control:focus, 
 .form-group .form-select:focus{
     outline: 0;
@@ -990,7 +1049,7 @@ input[type=number] {
     font-weight: 600;
 }
 .abt-img-3{
-    background-image: url(../images/interior/home_interiors/interior-v-9.jpg);
+    background-image: url(../images/construction/construction/construction-10.jpg);
     background-position: center;
     background-repeat: repeat;
     background-size: cover;
@@ -1004,7 +1063,7 @@ input[type=number] {
 }
 .abt-card{
     background-color: #242424;
-    padding: 1.2rem;
+    padding: 1.2rem 1rem;
     border-radius: 15px;
     color: #fff;
     text-align: center;
@@ -1207,6 +1266,10 @@ input[type=number] {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     box-shadow:none;
     transition: transform 0.5s ease;
+    height: 470px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .recent-project-slide .splide__slide:after{
     content: "";
@@ -1222,7 +1285,7 @@ input[type=number] {
 }
 .recent-project-slide .splide__slide img {
     width: 100%;
-    height: 470px;
+    height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
@@ -1360,7 +1423,7 @@ input[type=number] {
 }
 .choose-rt-img-2{
     height: 47%;
-    background-image: url(../images/interior/home_interiors/interior-v-16.jpg);
+    background-image: url(../images/construction/construction/construction-9.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1445,7 +1508,7 @@ input[type=number] {
     left: -100px;
     display: flex;
     flex-direction: column;
-    bottom: 5rem;
+    bottom: 3rem;
 }
 .testimonial-slides .splide__pagination__page{
     width: 15px;
