@@ -131,15 +131,35 @@
                     <img src="./images/close-white.png" alt="close btn">
                 </button>
             </div>
-            <div class="mobile-nav">
-                <a href="index.html" class="mobile-menu-link ">Home</a>
-                <a href="about-us.html" class="mobile-menu-link ">About Us</a>
-                <a href="#" class="mobile-menu-link ">Services</a>
-                <a href="interiors.html" class="mobile-menu-link">Interiors </a>
-                <a href="construction.html" class="mobile-menu-link active">Construction </a>
-                <a href="contact-us.html" class="mobile-menu-link">Contact</a>
-                
-            </div>
+            <ul class="mobile-nav">
+                <li class="mobile-navitem">
+                    <a href="index.html" class="mobile-menu-link ">Home</a>
+                </li>
+                <li class="mobile-navitem">
+                    <a href="about-us.html" class="mobile-menu-link ">About Us</a>
+                </li>
+                <li class="mobile-navitem mobilenav-dropdown">
+                    <a href="#" class="mobile-menu-link active">Services <i class="fa-solid fa-angle-right arrow"></i></a>
+                    <ul class="mobile-subnav slideup">
+                        <li class="mobile-submenu-item">
+                            <a class="mobile-submenu-link" href="interiors.html" >Interiors</a>
+                        </li>
+                        <li class="mobile-submenu-item">
+                            <a class="mobile-submenu-link active" href="construction.html" >Construction</a>
+                        </li>
+                        <li class="mobile-submenu-item">
+                            <a class="mobile-submenu-link" href="project-management-consulting.html" >Project Management Consulting</a>
+                        </li>
+                        <li class="mobile-submenu-item">
+                            <a class="mobile-submenu-link" href="turnkey-project.html" >Turnkey Project</a>
+                        </li>
+                    </ul>
+                </li>
+               
+                <li class="mobile-navitem">
+                    <a href="contact-us.html" class="mobile-menu-link">Contact</a>
+                </li>
+            </ul>
             <div class="mobile-info">
                 <a href="mailto:enquiry@saffroninteriors.in" class="info-link">
                     <i class="fa-solid fa-envelope"></i>
@@ -615,7 +635,7 @@
             <div class="chat-with-us-2">
                 <h2>Home Construction <span style="color: var(--secondary-clr);">starts from</span> <br/>₹2,199 per sq.ft</h2>
                 <p>(Varies based on design, materials & location)</p>
-                <a href="https://wa.link/69su2q" target="_blank" class="btn btn-3">Chat With Us <i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://wa.link/aj5e06" target="_blank" class="btn btn-3">Chat With Us <i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </div>
      </section>
@@ -715,7 +735,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 text-center text-md-end">
-                    <a class="btn btn-3 " href="https://wa.link/69su2q" target="_blank">Book Free Consultation</a>
+                    <a class="btn btn-3 " href="https://wa.link/aj5e06" target="_blank">Book Free Consultation</a>
                 </div>
                 <div class="col-lg-9"></div>
             </div>
@@ -829,16 +849,15 @@
                 </div>
                 <div class="col-lg-4">
                     <ul class="ftr-menu ">
-                        <li><a href="#">Privacy & Policy</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Media centre</a></li>
+                        <li><a href="privacy-policy.html" target="_blank">Privacy & Policy</a></li>
+                        <li><a href="terms-and-condition.html" target="_blank">Terms and Conditions</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 
-    <a href="https://wa.link/69su2q" target="_blank" class="whatsapp-action">
+    <a href="https://wa.link/aj5e06" target="_blank" class="whatsapp-action">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 <script src="./js/bootstrap.bundle.min.js"></script>

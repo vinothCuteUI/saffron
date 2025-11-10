@@ -53,22 +53,25 @@
                 </div>
                 <div class="col-xl-4">
                     <div class="banner-get-quote ">
-                        <form class="banner-form" >
+                        <form class="banner-form" id="constructionGetQuoteForm">
+                            <div class="loader-container d-none">
+                                <span class="loader"></span>
+                            </div>
                             <div class="form-title text-center mb-4">
                                 <h3>Get Your Quote</h3>
+                                <div class="alert d-none" role="alert" id="homeGetQuoteErr"></div>
                             </div>
                             <div class="form-group mb-4">
                                 <input type="text" class="form-control" id="userName" placeholder="Your name">
                             </div>
                             <div class="form-group mb-4">
-                                <input type="number" class="form-control" id="phone" placeholder="Mobile number">
+                                <input type="number" class="form-control" id="mobile" placeholder="Mobile number">
                             </div>
                             <div class="form-group mb-4">
-                                <select class="form-select" aria-label="Default select example">
-                                    <option value="null">Project type</option>
-                                    <option value="residential">Residential</option>
-                                    <option value="commercial">Commercial </option>
-                                    <option value="renovation">Renovation </option>
+                                <select class="form-select" id="projectType" aria-label="Default select example">
+                                    <option value="Residential">Residential</option>
+                                    <option value="Commercial">Commercial </option>
+                                    <option value="Renovation">Renovation </option>
                                 </select>
                             </div>
                             <div class="form-group mb-4">
@@ -212,13 +215,13 @@
             
         </div>
         <div class="text-center pt-5">
-            <a href="https://wa.link/69su2q" class="btn btn-3">Talk to Our Construction Expert  <i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://wa.link/aj5e06" class="btn btn-3">Talk to Our Construction Expert  <i class="fa-brands fa-whatsapp"></i></a>
         </div>
     </section>
 
 
 
-    <section class="page-section landing-services ">
+    <section class="page-section landing-services " style="background-image: url(./images/img-12.jpg);">
         <div class="container">
             <div class="row justify-content-end">
                 <div class="col-lg-8">
@@ -643,27 +646,32 @@
                     <h2>Get a Free Site Visit & Consultation Worth <br/>₹5,000 — Absolutely Free!</h2>
                     <p>Our engineers will visit your site, understand your requirements, and provide a detailed cost <br/>estimate no hidden charges, no obligations.</p>
                 
-                    <a href="index.html" class="btn btn-primary btn-with-arrow">Get My Free Site Visit Now <i class="fa-solid fa-arrow-right"></i></a>
+                    <!-- <a href="index.html" class="btn btn-primary btn-with-arrow">Get My Free Site Visit Now <i class="fa-solid fa-arrow-right"></i></a> -->
                     <p class="reassurance-line">Offer valid till this week only — schedule your free visit today!</p>
                 </div>
             
             
                 <div class="banner-get-quote ">
-                    <form class="banner-form" >
-                        
+                    <form class="banner-form" id="constructionGetQuoteForm2">
+                        <div class="loader-container d-none">
+                            <span class="loader"></span>
+                        </div>
+                        <div class="form-title text-center ">
+                            <div class="alert d-none mb-3" role="alert"></div>
+                        </div>
                         <div class="form-row">
+
                             <div class="form-group">
                                 <input type="text" class="form-control" id="userName" placeholder="Your name">
                             </div>
                             <div class="form-group">
-                                <input type="number" class="form-control" id="phone" placeholder="Mobile number">
+                                <input type="number" class="form-control" id="mobile" placeholder="Mobile number">
                             </div>
                             <div class="form-group">
-                                <select class="form-select" aria-label="Default select example">
-                                    <option value="null">Project type</option>
-                                    <option value="residential">Residential</option>
-                                    <option value="commercial">Commercial </option>
-                                    <option value="renovation">Renovation </option>
+                                <select class="form-select" id="projectType" >
+                                    <option value="Residential">Residential</option>
+                                    <option value="Commercial">Commercial </option>
+                                    <option value="Renovation">Renovation </option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -671,7 +679,7 @@
                             </div>
                             
                             <div class="form-submit">
-                                <button class="btn btn-primary">Get Free Quote Now</button>
+                                <button class="btn btn-primary">Get My Free Site Visit Now</button>
                             </div>
                             
                         </div>
@@ -689,7 +697,7 @@
             <div class="chat-with-us-2">
                 <h2>Home Construction <span style="color: var(--secondary-clr);">starts from</span> <br/>₹2,199 per sq.ft</h2>
                 <p>(Varies based on design, materials & location)</p>
-                <a href="https://wa.link/69su2q" target="_blank" class="btn btn-3">Chat With Us <i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://wa.link/aj5e06" target="_blank" class="btn btn-3">Chat With Us <i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </div>
      </section>
@@ -734,7 +742,7 @@
                         <img src="./images/img-13.jpg" alt="FAQ">
                         <h4>Still have questions? Talk to Our Team Now?</h4>
                         <p class="mb-4">Our team will guide you through our design process, project specifications and cost estimate.</p>
-                        <a href="https://wa.link/69su2q" target="_blank" class="btn btn-3">Chat With Us <i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://wa.link/aj5e06" target="_blank" class="btn btn-3">Chat With Us <i class="fa-brands fa-whatsapp"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-8">
@@ -845,7 +853,7 @@
     </div>
 
 
-<a href="https://wa.link/69su2q" target="_blank" class="whatsapp-action">
+<a href="https://wa.link/aj5e06" target="_blank" class="whatsapp-action">
     <i class="fa-brands fa-whatsapp"></i>
 </a>
 
@@ -919,6 +927,10 @@
         clearTimeout(window.resizedFinished);
         window.resizedFinished = setTimeout(initLightBox, 300);
     })
+
+    //Form submition
+    formQuoteSubmition("constructionGetQuoteForm", "construction", ["userName", "mobile", "projectType", "city"])
+    formQuoteSubmition("constructionGetQuoteForm2", "construction", ["userName", "mobile", "projectType", "city"])
 </script>
 </body>
 </html>

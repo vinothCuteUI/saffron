@@ -296,7 +296,9 @@
         text-align: center;
         margin-top: 2rem;
     }
-
+    .thankyou-card{
+        width: 95%;
+    }
 }
 
 /* ========== Large Mobile (landscape phones, phablets) ========== */
@@ -519,6 +521,9 @@
     .faq-accordion .accordion-button{
         font-size: 1.5rem;
     }
+    .thankyou-card{
+        width: 90%;
+    }
 }
 
 /* ========== Small Laptop ========== */
@@ -607,7 +612,7 @@
     }
     .landing-banner-section{
         height: auto;
-        padding: 80px 0;
+        padding: 120px 0;
     }
     .choose-us-list:nth-child(even) .card-7{
         border-right: 0;

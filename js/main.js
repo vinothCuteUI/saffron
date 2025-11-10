@@ -20,7 +20,7 @@ let mobileOpenBtn = document.getElementById("mobileOpenBtn");
 let closeMobileMenu = document.getElementById("closeMobileMenu");
 let clearMobileFade = null
 let mobileMenuSection =  document.querySelector(".mobile-menu-section")
-mobileOpenBtn.addEventListener("click", (e) => {
+mobileOpenBtn?.addEventListener("click", (e) => {
     mobileMenuSection.classList.add("show")
     mobileMenuSection.classList.remove("fade")
     document.body.style.overflow = "hidden";
@@ -28,7 +28,7 @@ mobileOpenBtn.addEventListener("click", (e) => {
 
     
 })
-closeMobileMenu.addEventListener("click", (e) => {
+closeMobileMenu?.addEventListener("click", (e) => {
     mobileMenuSection.classList.add("fade")
     clearMobileFade = setTimeout(()=>{
         mobileMenuSection.classList.remove("show");
@@ -80,13 +80,14 @@ numberCount.forEach((item) => {
 
 
 //Form submition
-function formQuoteSubmition(formId, urlApi, fieldsInput){
-  const homeGetQuoteForm = document.querySelector("#"+formId);
-  const homeGetQuoteErr = document.querySelector(`#${formId} .alert`);
-  const formInputs = document.querySelectorAll(".form-control");
-  const formSelect = document.querySelector(".form-select");
-  const loaderForm = document.querySelector(`#${formId} .loader-container`)
-  const GOOGLE_SCRIPT_URL = urlApi;
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzhnEovL7gEO3xjhZmICSVYn4ntQiSKwDYwDW5kqLoMt5q4xD5t84i8qnLQH0uTQyDGUQ/exec"
+function formQuoteSubmition(formId, formType, fieldsInput){
+  const getQuoteForm = document.querySelector("#"+formId);
+  const getQuoteErr = getQuoteForm.querySelector(`.alert`);
+  const formInputs = getQuoteForm.querySelectorAll(`.form-control`);
+  const formSelect = getQuoteForm.querySelector(`.form-select`);
+  const loaderForm = getQuoteForm.querySelector(`.loader-container`)
+//   const GOOGLE_SCRIPT_URL = urlApi;
   let formAlertTime;
 
   formInputs.forEach((inputs) => {
@@ -95,33 +96,36 @@ function formQuoteSubmition(formId, urlApi, fieldsInput){
           node.classList.remove("invalid")
       })
   })
-  formSelect.addEventListener("change", (e) => {
+  formSelect?.addEventListener("change", (e) => {
       let node = e.target;
       node.classList.remove("invalid")
   })
 
   function closeErrorMessage(){
       formAlertTime = setTimeout(() => {
-          homeGetQuoteErr.classList.add("d-none");
-          homeGetQuoteErr.classList.remove("alert-danger");
-          homeGetQuoteErr.classList.remove("alert-success");
+          getQuoteErr.classList.add("d-none");
+          getQuoteErr.classList.remove("alert-danger");
+          getQuoteErr.classList.remove("alert-success");
 
       }, 2000)
   }
 
-    homeGetQuoteForm.addEventListener("submit", async (e) => {
+    getQuoteForm.addEventListener("submit", async (e) => {
+
         e.preventDefault();
         if(formAlertTime) clearTimeout(formAlertTime);
-        homeGetQuoteErr.textContent = ""
+        getQuoteErr.textContent = ""
         let isValidForm = true;
         // let fieldsInput = ["userName", "mobile", "serviceType", "city"]
        
         const nameRegex = /^[A-Za-z\s]+$/;
         const mobileRegex = /^[0-9]{10}$/;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
         let message = "";
         let formData = {};
         fieldsInput.forEach((inptId) => {
-            let inpt = document.getElementById(inptId)
+            let inpt = getQuoteForm.querySelector(`#${inptId}`)
             const value = inpt.value.trim();
             message = "";
             if(!value){
@@ -133,16 +137,20 @@ function formQuoteSubmition(formId, urlApi, fieldsInput){
             else if (inptId == "mobile" &&  !mobileRegex.test(value)) {
                 message = "Enter a valid 10-digit mobile number."
             }
+            else if (inptId == "email" &&  !emailRegex.test(value)) {
+                message = "Enter a valid Email Id."
+            }
 
+            if (message) isValidForm = false;
             if (message) {
-                isValidForm = false;
                 inpt.classList.add("invalid")
-                homeGetQuoteErr.classList.remove("d-none");
-                homeGetQuoteErr.classList.add("alert-danger");
-                homeGetQuoteErr.textContent = message;
+                getQuoteErr.classList.remove("d-none");
+                getQuoteErr.classList.add("alert-danger");
+                getQuoteErr.textContent = message;
             } else{
                 message = "Submitted successfully!"
             }
+
             formData[inptId] = value;
 
             
@@ -156,39 +164,85 @@ function formQuoteSubmition(formId, urlApi, fieldsInput){
 
         try {
             const formDataObj = new FormData();
-            formDataObj.append("userName", formData["userName"]);
-            formDataObj.append("mobile", formData["mobile"]);
-            formDataObj.append("serviceType", formData["serviceType"]);
-            formDataObj.append("city", formData["city"]);
+            formDataObj.append("formType", formType);
+            for(let fm in formData){
+                formDataObj.append(fm, formData[fm]);
+            }
+            // formDataObj.append("mobile", formData["mobile"]);
+            // formDataObj.append("serviceType", formData["serviceType"]);
+            // formDataObj.append("city", formData["city"]);
             loaderForm.classList.remove("d-none")
-
+            console.log("formDataObj", formDataObj)
             const res = await fetch(GOOGLE_SCRIPT_URL, {
                 method: "POST",
                 body: formDataObj,
             });
             const result = await res.json();
             if (result.result === "success") {
-                homeGetQuoteErr.classList.remove("d-none");
-                homeGetQuoteErr.classList.remove("alert-danger");
-                homeGetQuoteErr.classList.add("alert-success");
-                homeGetQuoteErr.textContent = message;
-                homeGetQuoteForm.reset();
-                closeErrorMessage()
+                getQuoteErr.classList.remove("d-none");
+                getQuoteErr.classList.remove("alert-danger");
+                getQuoteErr.classList.add("alert-success");
+                getQuoteErr.textContent = message;
+                getQuoteForm.reset();
+                closeErrorMessage();
+                window.location.href = '/thank-you.html'
             }else { 
-                homeGetQuoteErr.classList.remove("d-none"); 
-                homeGetQuoteErr.classList.add("alert-danger"); 
-                homeGetQuoteErr.textContent = "Failed to save data."; 
+                getQuoteErr.classList.remove("d-none"); 
+                getQuoteErr.classList.add("alert-danger"); 
+                getQuoteErr.textContent = "Failed to save data."; 
                 closeErrorMessage() 
             }
             loaderForm.classList.add("d-none")
         } catch (error) {
             loaderForm.classList.add("d-none")
-            homeGetQuoteErr.classList.remove("d-none");
-            homeGetQuoteErr.classList.add("alert-danger");
-            homeGetQuoteErr.textContent  = "Somthing went wrong please try again later.";
+            getQuoteErr.classList.remove("d-none");
+            getQuoteErr.classList.add("alert-danger");
+            getQuoteErr.textContent  = "Somthing went wrong please try again later.";
             closeErrorMessage()
             console.error(error);
         }
     
     });
 }
+
+let mobilenavDropdown = document.querySelectorAll(".mobilenav-dropdown");
+
+mobilenavDropdown.forEach((dpMenu) => {
+    dpMenu.addEventListener("click", (e) => {
+        
+        const toggle = e.target.classList.contains('mobilenav-dropdown');
+      
+        if (!toggle) return;
+
+        e.preventDefault();
+        let transitionTime = 500;
+        let node = e.target;
+        let parent = node.parentNode;
+        const mobileSubnav = parent.querySelector(".mobile-subnav")
+
+        node.classList.toggle("active");
+        mobileSubnav.style.transition = `height ${(transitionTime / 10) / 100}s ease`;
+
+        if (mobileSubnav.classList.contains("slideup")) {
+            mobileSubnav.classList.remove("slideup");
+            mobileSubnav.classList.add("slidedown");
+
+            const crntHeight = mobileSubnav.scrollHeight + "px";
+            mobileSubnav.style.height = "0px";
+            mobileSubnav.offsetHeight;
+            mobileSubnav.style.height = crntHeight;
+            setTimeout(() => {
+                mobileSubnav.style.height = "auto";
+            }, transitionTime);
+        } else {
+            mobileSubnav.style.height = mobileSubnav.scrollHeight + 'px';
+            mobileSubnav.offsetHeight;
+            mobileSubnav.style.height = '0px';
+
+            mobileSubnav.addEventListener('transitionend', function () {
+                mobileSubnav.classList.remove('slidedown');
+                mobileSubnav.classList.add('slideup');
+            }, { once: true });
+        }
+    })
+})
