@@ -186,11 +186,11 @@ function formQuoteSubmition(formId, formType, fieldsInput){
                 getQuoteForm.reset();
                 closeErrorMessage();
                 if(formType == "interior"){
-                    window.location.href = '/interiors-thank-you.html'
+                    window.location.href = '/saffron/interiors-thank-you.html'
                 }else if(formType == "construction"){
-                    window.location.href = '/construction-thank-you.html'
+                    window.location.href = '/saffron/construction-thank-you.html'
                 }else{
-                    window.location.href = '/thank-you.html'
+                    window.location.href = '/saffron/thank-you.html'
                 }
             }else { 
                 getQuoteErr.classList.remove("d-none"); 
