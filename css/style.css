@@ -2897,10 +2897,12 @@ input[type=number] {
 
 .thankyou-container{
     background-color: #d8f0fa;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 1.5rem;
 }
 .thankyou-card{
     background-color: #fff;
@@ -2943,17 +2945,45 @@ input[type=number] {
     margin-bottom: 2rem;
 }
 .thankyou-body h2{
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 1.5rem;
 }
 .thankyou-body .thank-you-btn{
+    position: relative;
     display: inline-block;
     text-decoration: none;
     color: #fff;
-    background-color: var(--primary-clr);
-    border-radius: 25px;
-    text-align: center;
-    padding: 0.5rem 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    background-color: #000;
+    border-radius: 50px;
+    text-align: left;
+    padding: 0.5rem 2rem 0.5rem 3rem;
     margin-top: 2rem;
+    margin-left: 40px;
     box-shadow: 0 3px 10px -3px #777;
+    line-height: 1;
+}
+.thankyou-body .thank-you-btn img{
+    position: absolute;
+    width: 84px;
+    height: auto;
+    left: -40px;
+    top: -7px;
+}
+.thankyou-body .thank-you-btn span{
+    font-size: 1rem;
+    display: block;
+    font-weight: 600;
+    color: #29c63b;
+    margin-top: 0.3rem;
+}
+.thankyou-container .logo{
+    background-color: #fff;
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem 1rem;
+}
+.thankyou-container .footer-details{
+    width: 100%;
 }

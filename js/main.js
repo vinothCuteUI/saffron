@@ -185,7 +185,13 @@ function formQuoteSubmition(formId, formType, fieldsInput){
                 getQuoteErr.textContent = message;
                 getQuoteForm.reset();
                 closeErrorMessage();
-                window.location.href = '/thank-you.html'
+                if(formType == "interior"){
+                    window.location.href = '/interiors-thank-you.html'
+                }else if(formType == "construction"){
+                    window.location.href = '/construction-thank-you.html'
+                }else{
+                    window.location.href = '/thank-you.html'
+                }
             }else { 
                 getQuoteErr.classList.remove("d-none"); 
                 getQuoteErr.classList.add("alert-danger"); 
