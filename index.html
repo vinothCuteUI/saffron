@@ -941,8 +941,20 @@
                         <h2>Download Our <br/>Brochure</h2>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-6 text-center text-md-end">
-                    <button class="btn btn-3">Download Now</button>
+                <div class="col-md-6 col-lg-6">
+                    <div class="download-btns d-flex justify-content-center justify-content-md-end">
+                        <div class="dropdown">
+                            <button class="btn btn-3 dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Download Now
+                            </button>
+                            <div class="dropdown-menu" >
+                                <a class="dropdown-item" href="./images/download-file/civil.pdf" download><span>Civil</span> <i class="fa-solid fa-download"></i></a>
+                                <a class="dropdown-item" href="./images/download-file/interior.pdf" download><span>Interior</span> <i class="fa-solid fa-download"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- <button class="btn btn-3">Download Now</button> -->
                 </div>
                 <div class="col-lg-9"></div>
             </div>
@@ -1067,6 +1079,7 @@
     <a href="https://wa.link/aj5e06" target="_blank" class="whatsapp-action">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
+    
 <script src="./js/bootstrap.bundle.min.js"></script>
 <script src="./js/splide.min.js"></script>
 <script src="./js/main.js"></script>

@@ -1845,7 +1845,7 @@ input[type=number] {
     background-color: #080A0B;
     color: #fff;
     font-size: 1.2rem;
-    border-radius: 5px;
+    border-radius: 10px;
     border: solid 1px #080A0B;
     align-content: center;
     overflow: hidden;
@@ -2986,4 +2986,23 @@ input[type=number] {
 }
 .thankyou-container .footer-details{
     width: 100%;
+}
+.download-btns .dropdown-menu{
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0.5rem;
+    box-shadow: 0 3px 10px -3px #777;
+}
+.download-btns .dropdown-menu .dropdown-item{
+    padding: 0.5rem 1rem;
+    /* border-bottom: solid 1px #e4e4e4; */
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.download-btns .dropdown-menu .dropdown-item:hover{
+    background-color: var(--text-primary-clr);
+    color: #fff;
 }
