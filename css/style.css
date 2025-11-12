@@ -252,6 +252,11 @@ p{
     border-color:var(--primary-clr) !important;
     padding: 0.8rem 1.2rem;
 }
+
+.btn:focus, 
+.btn-outline-primary:focus{
+    box-shadow: none;
+}
 .btn-outline-primary:hover{
     background-color: transparent !important;
     border-color: var(--secondary-clr) !important;
@@ -3005,4 +3010,18 @@ input[type=number] {
 .download-btns .dropdown-menu .dropdown-item:hover{
     background-color: var(--text-primary-clr);
     color: #fff;
+}
+
+.modal-form-dialog{
+    max-width: 400px;
+}
+.modal-form-content{
+    border-radius: 10px;
+}
+.modal-form-content .modal-header{
+    border-bottom:0;
+}
+.modal-form-content .banner-form{
+    padding: 0;
+    border: 0;
 }

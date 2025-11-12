@@ -90,7 +90,7 @@
 
                     <div class="col-6 col-lg-2 ">
                         <div class="header-action d-flex gap-3 justify-content-end align-items-center">
-                            <button class="btn btn-outline-primary btn-with-arrow d-none d-xl-inline-block">Get A Quote <i class="fa-solid fa-arrow-right"></i></button>
+                            <button class="btn btn-outline-primary btn-with-arrow d-none d-xl-inline-block" data-bs-toggle="modal" data-bs-target="#modalForm">Get A Quote <i class="fa-solid fa-arrow-right"></i></button>
                             <button class="mobile-open-btn d-inline-block d-xl-none " id="mobileOpenBtn"><i class="fa-solid fa-bars"></i></button>
                         </div>
                     </div>
@@ -166,7 +166,7 @@
                 </a>
             </div>
             <div class="mobile-btns">
-                <button class="btn btn-primary btn-with-arrow">Get A Quote <i class="fa-solid fa-arrow-right"></i></button>
+                <button class="btn btn-primary btn-with-arrow" data-bs-toggle="modal" data-bs-target="#modalForm">Get A Quote <i class="fa-solid fa-arrow-right"></i></button>
             </div>
         </div>
         
@@ -395,7 +395,52 @@
     <a href="https://wa.link/aj5e06" target="_blank" class="whatsapp-action">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
+
+    <div class="modal fade" id="modalForm" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-form-dialog">
+            <div class="modal-content modal-form-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" >Get Your Quote</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="banner-form " id="modalGetQuoteForm">
+                        <div class="loader-container d-none">
+                            <span class="loader"></span>
+                        </div>
+                        <div class="form-title text-center">
+                            <div class="alert mb-2 d-none" role="alert" id="homeGetQuoteErr"></div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <input type="text" class="form-control " id="userName" placeholder="Your name">
+                        </div>
+                        <div class="form-group mb-4">
+                            <input type="number" class="form-control" id="mobile"  placeholder="Mobile number">
+                        </div>
+                        <div class="form-group mb-4">
+                            <select class="form-select" id="serviceType" aria-label="Default select example">
+                                <!-- <option value="">-- Service Type --</option> -->
+                                <option value="Civil">Civil</option>
+                                <option value="Interiors">Interiors</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-4">
+                            <input type="text" class="form-control" id="city" placeholder="Your city">
+                        </div>
+                        <div class="form-submit">
+                            <button class="btn btn-primary">Get Free Quote Now</button>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
 <script src="./js/bootstrap.bundle.min.js"></script>
 <script src="./js/main.js"></script>
+<script>
+    formQuoteSubmition("modalGetQuoteForm", "homepage", ["userName", "mobile", "serviceType", "city"])
+</script>
 </body>
 </html>

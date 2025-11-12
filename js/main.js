@@ -185,12 +185,13 @@ function formQuoteSubmition(formId, formType, fieldsInput){
                 getQuoteErr.textContent = message;
                 getQuoteForm.reset();
                 closeErrorMessage();
+                let originURL = window.location.origin
                 if(formType == "interior"){
-                    window.location.href = '/saffron/interiors-thank-you.html'
+                    window.location.href = `${originURL}/interiors-thank-you.html`;
                 }else if(formType == "construction"){
-                    window.location.href = '/saffron/construction-thank-you.html'
+                    window.location.href = `${originURL}/construction-thank-you.html`
                 }else{
-                    window.location.href = '/saffron/thank-you.html'
+                    window.location.href = `${originURL}/thank-you.html`
                 }
             }else { 
                 getQuoteErr.classList.remove("d-none"); 
