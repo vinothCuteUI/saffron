@@ -188,11 +188,11 @@ function formQuoteSubmition(formId, formType, fieldsInput){
                 closeErrorMessage();
                 
                 if(formType == "interior"){
-                    window.location.href = `${originURL}/interiors-thank-you.html`;
+                    window.location.href = `${originURL}/saffron/interiors-thank-you.html`;
                 }else if(formType == "construction"){
-                    window.location.href = `${originURL}/construction-thank-you.html`
+                    window.location.href = `${originURL}/saffron/construction-thank-you.html`
                 }else{
-                    window.location.href = `${originURL}/thank-you.html`
+                    window.location.href = `${originURL}/saffron/thank-you.html`
                 }
             }else { 
                 getQuoteErr.classList.remove("d-none"); 
