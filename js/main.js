@@ -6,7 +6,7 @@ window.scrollBy({
 
 
 let originURL = window.location.origin
-
+console.log("originURL", originURL)
 //Header
 let mainHeader = document.querySelector(".main-header");
 
