@@ -1279,12 +1279,35 @@ input[type=number] {
     padding: 2rem;
     border-radius: 10px;
     border: solid 1px #ccc;
+    transition: all 0.3s ease;
+    position: relative;
 }
+
+.card-3 .card-3-navigator{
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.card-3:hover{
+    border-color: var(--text-primary-clr);
+    background-color: var(--text-primary-clr); 
+    box-shadow: 0 3px 30px -2px #777;
+    transform: scale(1.1);
+}
+
 .card-3-header {
     display: flex;
     align-items: center;
     gap: 1.5rem;
     margin-bottom: 2rem;
+}
+.card-3:hover .card-3-header h3,
+.card-3:hover p{
+    color: #fff;
 }
 .card-3-header .card-3-img{
     width: 80px;
@@ -1294,10 +1317,20 @@ input[type=number] {
     align-items: center;
     border: solid 1px #ccc;
     border-radius: 10px;
+    flex:0 0 auto;
 }
 .card-3-img img{
-    width: 35px;
+    width: 40px;
     height: auto;
+}
+.card-3-img .hover-icon{
+    display: none;
+}
+.card-3:hover .card-3-img .static-icon{
+    display: none;
+}
+.card-3:hover .card-3-img .hover-icon{
+    display: inline-block;
 }
 .card-3-header h3{
     font-family: 'Outfit', sans-serif;
@@ -1807,6 +1840,7 @@ input[type=number] {
     color: #fff;
     font-size: 1.1rem;
     line-height: 1.8;
+    margin-bottom: 0;
 }
 .partner-logo img{
     width: 100%;

@@ -5,6 +5,8 @@ window.scrollBy({
 });
 
 
+let originURL = window.location.origin
+
 //Header
 let mainHeader = document.querySelector(".main-header");
 
@@ -82,33 +84,33 @@ numberCount.forEach((item) => {
 //Form submition
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzhnEovL7gEO3xjhZmICSVYn4ntQiSKwDYwDW5kqLoMt5q4xD5t84i8qnLQH0uTQyDGUQ/exec"
 function formQuoteSubmition(formId, formType, fieldsInput){
-  const getQuoteForm = document.querySelector("#"+formId);
-  const getQuoteErr = getQuoteForm.querySelector(`.alert`);
-  const formInputs = getQuoteForm.querySelectorAll(`.form-control`);
-  const formSelect = getQuoteForm.querySelector(`.form-select`);
-  const loaderForm = getQuoteForm.querySelector(`.loader-container`)
-//   const GOOGLE_SCRIPT_URL = urlApi;
-  let formAlertTime;
+    const getQuoteForm = document.querySelector("#"+formId);
+    const getQuoteErr = getQuoteForm.querySelector(`.alert`);
+    const formInputs = getQuoteForm.querySelectorAll(`.form-control`);
+    const formSelect = getQuoteForm.querySelector(`.form-select`);
+    const loaderForm = getQuoteForm.querySelector(`.loader-container`)
+    //   const GOOGLE_SCRIPT_URL = urlApi;
+    let formAlertTime;
 
-  formInputs.forEach((inputs) => {
-      inputs.addEventListener("keyup", (e)=>{
-          let node = e.target;
-          node.classList.remove("invalid")
-      })
-  })
-  formSelect?.addEventListener("change", (e) => {
-      let node = e.target;
-      node.classList.remove("invalid")
-  })
+    formInputs.forEach((inputs) => {
+        inputs.addEventListener("keyup", (e)=>{
+            let node = e.target;
+            node.classList.remove("invalid")
+        })
+    })
+    formSelect?.addEventListener("change", (e) => {
+        let node = e.target;
+        node.classList.remove("invalid")
+    })
 
-  function closeErrorMessage(){
-      formAlertTime = setTimeout(() => {
-          getQuoteErr.classList.add("d-none");
-          getQuoteErr.classList.remove("alert-danger");
-          getQuoteErr.classList.remove("alert-success");
+    function closeErrorMessage(){
+        formAlertTime = setTimeout(() => {
+            getQuoteErr.classList.add("d-none");
+            getQuoteErr.classList.remove("alert-danger");
+            getQuoteErr.classList.remove("alert-success");
 
-      }, 2000)
-  }
+        }, 2000)
+    }
 
     getQuoteForm.addEventListener("submit", async (e) => {
 
@@ -172,7 +174,6 @@ function formQuoteSubmition(formId, formType, fieldsInput){
             // formDataObj.append("serviceType", formData["serviceType"]);
             // formDataObj.append("city", formData["city"]);
             loaderForm.classList.remove("d-none")
-            console.log("formDataObj", formDataObj)
             const res = await fetch(GOOGLE_SCRIPT_URL, {
                 method: "POST",
                 body: formDataObj,
@@ -185,7 +186,7 @@ function formQuoteSubmition(formId, formType, fieldsInput){
                 getQuoteErr.textContent = message;
                 getQuoteForm.reset();
                 closeErrorMessage();
-                let originURL = window.location.origin
+                
                 if(formType == "interior"){
                     window.location.href = `${originURL}/interiors-thank-you.html`;
                 }else if(formType == "construction"){

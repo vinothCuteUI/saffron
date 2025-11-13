@@ -246,7 +246,7 @@
                             <span class="loader"></span>
                         </div>
                         <div class="form-title text-center">
-                            <div class="alert d-none" role="alert"></div>
+                            <div class="alert d-none mb-2" role="alert"></div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 col-xl-6">
@@ -257,8 +257,8 @@
                             </div>
                             <div class="col-md-6 col-xl-6">
                                 <div class="form-group mb-4">
-                                    <label class="form-label" for="phone">Phone <sup>*</sup></label>
-                                    <input type="number" id="mobile" name="phone" placeholder="Phone" class="form-control" />
+                                    <label class="form-label" for="Mobile">Mobile <sup>*</sup></label>
+                                    <input type="number" id="mobile" name="mobile" placeholder="Mobile number" class="form-control" />
                                 </div>
                             </div>
 
@@ -305,7 +305,7 @@
                 <div class="col-md-8 col-lg-3 pe-md-4">
                     <div class="footer-abt mb-5">
                         <div class="ftr-logo">
-                            <img src="./images/logo.png" alt="Logo"/>
+                            <img src="./images/footer-Logo-white.png" alt="Logo"/>
                             <p>We design elegant interiors and build quality homes — delivering style, comfort, and durability across Chennai and Tamil Nadu.</p>
                         </div>
                         <div class="ftr-input">
@@ -373,18 +373,7 @@
                         </ul>
                     </div>
                 </div>
-                <!-- <div class="col-lg-8">
-                    <div class="footer-links ">
-                        
-
-                        
-
-                        
-                        
-                    </div>
-                    
-
-                </div> -->
+                
                 
             </div>
         </div>
@@ -464,7 +453,113 @@
 <script>
 
     //Form submition
-    formQuoteSubmition("contactForm", "contact", ["userName", "mobile", "email", "subject", "message"])
+    let contactFormAlertTime;
+    let isValidContactForm = 0;
+    let contactForm = document.getElementById("contactForm")
+    let getQuoteErr = contactForm.querySelector(".alert")
+    let formInputs = contactForm.querySelectorAll(".form-control")
+    const loaderContactForm = contactForm.querySelector(`.loader-container`)
+    let contactFrmMessage = "";
+    contactForm.addEventListener("submit", async function (e) {
+
+        e.preventDefault();
+        
+        if(contactFormAlertTime) clearTimeout(contactFormAlertTime);
+        getQuoteErr.textContent = ""
+        formInputs.forEach((inputs) => {
+            inputs.addEventListener("keyup", (e)=>{
+                let node = e.target;
+                node.classList.remove("invalid")
+            })
+        })
+        const formData = new FormData(this);
+        let formValue = Object.fromEntries(formData.entries())
+        
+        const nameRegex = /^[A-Za-z\s]+$/;
+        const mobileRegex = /^[0-9]{10}$/;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+        isValidContactForm = 0;
+        for(let fr in formValue){
+            let inpt = this.querySelector(`#${fr}`)
+         
+            const value = inpt.value.trim();
+            contactFrmMessage = "";
+            if(!value){
+                contactFrmMessage = "All fields is required.";
+            }else if (fr == "userName" && !nameRegex.test(value)) {
+                contactFrmMessage = "Enter a valid name."
+                
+            }
+            else if (fr == "mobile" &&  !mobileRegex.test(value)) {
+                contactFrmMessage = "Enter a valid 10-digit mobile number."
+            }
+            else if (fr == "email" &&  !emailRegex.test(value)) {
+                contactFrmMessage = "Enter a valid Email Id."
+            }
+
+            if (contactFrmMessage) isValidContactForm += 1;
+            if (contactFrmMessage && isValidContactForm > 0) {
+                inpt.classList.add("invalid")
+                getQuoteErr.classList.remove("d-none");
+                getQuoteErr.classList.add("alert-danger");
+                getQuoteErr.textContent = contactFrmMessage;
+            } 
+            
+            function closeErrorMessage(){
+                contactFormAlertTime = setTimeout(() => {
+                    getQuoteErr.classList.add("d-none");
+                    getQuoteErr.classList.remove("alert-danger");
+                    getQuoteErr.classList.remove("alert-success");
+
+                }, 2000)
+            }
+            closeErrorMessage()
+        }
+
+        if(isValidContactForm == 0){
+           
+            
+            loaderContactForm.classList.remove("d-none")
+            try{
+                const response = await fetch(`${originURL}/backend/contact-form.php`, {method: "POST", body: formData})
+                const data = await response.json();
+                if (data.success) {
+                    contactForm.reset();
+                    getQuoteErr.classList.remove("d-none");
+                    getQuoteErr.classList.remove("alert-danger");
+                    getQuoteErr.classList.add("alert-success");
+                    getQuoteErr.textContent = "Your details has been submitted successfully!";
+                    closeErrorMessage()
+                    loaderContactForm.classList.add("d-none")
+                }else{
+                    getQuoteErr.classList.remove("d-none");
+                    getQuoteErr.classList.add("alert-danger");
+                    getQuoteErr.classList.remove("alert-success");
+                    getQuoteErr.textContent = "Something went wrong please try again later.";
+                    loaderContactForm.classList.add("d-none")
+                    contactForm.reset();
+                    closeErrorMessage()
+                }
+            }
+            catch(error){
+                console.error(error);
+                getQuoteErr.classList.remove("d-none");
+                getQuoteErr.classList.add("alert-danger");
+                getQuoteErr.classList.remove("alert-success");
+                getQuoteErr.textContent = "Something went wrong please try again later.";
+                loaderContactForm.classList.add("d-none")
+                contactForm.reset();
+                closeErrorMessage()
+            }   
+            
+
+        }
+    
+    });
+
+
+    // formQuoteSubmition("contactForm", "contact", ["userName", "mobile", "email", "subject", "message"])
     formQuoteSubmition("modalGetQuoteForm", "homepage", ["userName", "mobile", "serviceType", "city"])
 </script>
 </body>
