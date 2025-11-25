@@ -154,11 +154,54 @@ p{
     font-size: 1rem;
 }
 
+.overflow-hidden{
+    overflow: hidden !important;
+}
 .bg-light-gray{
     background-color: #f5f5f5;
 }
 
-
+.page-loader-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page-loader-container.hide-loader{
+    display: none !important;
+}
+.page-loader {
+  width: 40px;
+  aspect-ratio: 1;
+  color: var(--primary-clr);
+  position: relative;
+  background:
+    conic-gradient(from 134deg at top   ,currentColor 92deg,#0000 0) top,
+    conic-gradient(from -46deg at bottom,currentColor 92deg,#0000 0) bottom;
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+}
+.page-loader:before {
+  content:'';
+  position: absolute;
+  inset: 0;
+  --g:currentColor 14.5px,#0000 0 calc(100% - 14.5px),currentColor 0;
+  background:
+    linear-gradient( 45deg,var(--g)),
+    linear-gradient(-45deg,var(--g));
+   animation: pageload 1.5s infinite cubic-bezier(0.3,1,0,1);
+}
+@keyframes pageload {
+   33%  {inset:-10px;transform: rotate(0deg)}
+   66%  {inset:-10px;transform: rotate(90deg)}
+   100% {inset:0    ;transform: rotate(90deg)}
+}
 
 .loader-container{
   position: absolute;
@@ -1822,22 +1865,22 @@ input[type=number] {
 
 /* Our partners --------------- */
 .our-partner{
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.85) , rgba(0, 0, 0, 0.85)), url(../images/bg-1.webp);
+    /* background-image: linear-gradient(to right, rgba(0, 0, 0, 0.85) , rgba(0, 0, 0, 0.85)), url(../images/bg-1.webp); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .client-logos{
-    border-right: solid 1px #fff;
+    border-right: solid 1px #ccc;
 }
 .client-logos h2{
     font-size: 2.5rem;
-    font-weight: 600;
-    color: #fff;
+    font-weight: 700;
+    /* color: #fff; */
     margin-bottom: 1.5rem;
 }
 .client-logos p{
-    color: #fff;
+    /* color: #fff; */
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 0;

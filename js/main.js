@@ -5,8 +5,16 @@ window.scrollBy({
 });
 
 
-let originURL = window.location.origin
-console.log("originURL", originURL)
+let originURL = window.location.origin;
+let body = document.querySelector("body");
+let pageLoader = document.getElementById("pageLoader");
+body.classList.add("overflow-hidden")
+
+window.onload = function () {
+  body.classList.remove("overflow-hidden");
+  pageLoader.classList.add("hide-loader");
+};
+
 //Header
 let mainHeader = document.querySelector(".main-header");
 
@@ -188,11 +196,11 @@ function formQuoteSubmition(formId, formType, fieldsInput){
                 closeErrorMessage();
                 
                 if(formType == "interior"){
-                    window.location.href = `${originURL}/saffron/interiors-thank-you.html`;
+                    window.location.href = `${originURL}/interiors-thank-you.html`;
                 }else if(formType == "construction"){
-                    window.location.href = `${originURL}/saffron/construction-thank-you.html`
+                    window.location.href = `${originURL}/construction-thank-you.html`
                 }else{
-                    window.location.href = `${originURL}/saffron/thank-you.html`
+                    window.location.href = `${originURL}/thank-you.html`
                 }
             }else { 
                 getQuoteErr.classList.remove("d-none"); 
